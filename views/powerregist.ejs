@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" href="/static/img/favicon-apple.png">
+    <link rel="icon" href="/static/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://cdn.bootstrapmb.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="/static/vendor/materializeicon/material-icons.css">
+    <!-- aniamte CSS -->
+    <link rel="stylesheet" href="/static/vendor/animatecss/animate.css">
+    <!-- swiper slider CSS -->
+    <link rel="stylesheet" href="/static/vendor/swiper/css/swiper.min.css">
+    <!-- app CSS -->
+    <link id="theme" rel="stylesheet" href="/static/css/purplesidebar.css" type="text/css">
+    <title>GoTRI - Mobile</title>
+</head>
+
+<body class="fixed-header sidebar-right-close sidebar-left-close">
+    <!-- page loader -->
+    <div class="loader justify-content-center pink-gradient">
+        <div class="align-self-center text-center">
+            <div class="logo-img-loader">
+                <img src="/static/img/loader-hole.png" alt="" class="logo-image">
+                <img src="/static/img/loader-bg.png" alt="" class="logo-bg-image">
+            </div>
+            <h2 class="mt-3 font-weight-light">耘存<br><small>- 手机端 -</small></h2>
+            <p class="mt-2 text-white"></p>
+        </div>
+    </div>
+    <!-- page loader ends  -->
+    <div class="wrapper h-100 h-sm-auto justify-content-center">
+        <!-- main header -->
+        <header class="main-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-auto px-0">
+                        <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
+                        <a href="/" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
+                        </a>
+                        <form class="search-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col px-0 text-right">
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">mail_outline</i>
+                                <span class="status-number bg-danger text-white">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0" aria-labelledby="dropdownmessage">
+                                <div class="arrow pink-gradient"></div>
+                                <div class="pink-gradient py-3 text-center">
+                                    <h5 class="mb-0">消息</h5>
+                                    <p class="mb-0">最新消息</p>
+                                </div>
+                                <div class="media new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息1</h5>
+                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <a href="">Reply</a>
+                                        <a href="" class="ml-2">View</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="media pink-gradient-active new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="my-0">消息2</h5>
+                                        <small class="text-muted d-block mb-2">2:05 am</small>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user2.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息3<small class="text-muted float-right">4:05 am</small></h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <figure class="userpic"><img src="/static/img/user1.png" alt=""></figure>
+                                <h5 class="text-hide-xs">
+                                    <small class="header-color-secondary"></small>
+                                    <span class="header-color-primary"></span>
+                                </h5>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown" aria-labelledby="dropdownMenuLink">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a href="profile.html">
+                                            <figure class="avatar avatar-120 mx-auto my-3">
+                                                <img src="/static/img/user1.png" alt="">
+                                            </figure>
+                                            <h5 class="card-title mb-2 header-color-primary">John McMohan</h5>
+                                            <h6 class="card-subtitle mb-3 header-color-secondary">South Africa</h6>
+                                        </a>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <button class="btn btn-sm pink-gradient border-0 mb-3">Edit</button>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);" id="open-right-sidebar">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Setting
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="header-color-secondary ml-2"><i class="material-icons vm">settings</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            5458 <small class="header-color-secondary font-italic">Points Collected</small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="header-color-secondary material-icons vm">local_play</i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="signall.ejs">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Logout
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main header ends -->
+        <!-- sidebar left -->
+        <div class="sidebar sidebar-left">
+            <div class="container has-background-img">
+                <figure class="background-img pink-gradient">
+                    <img src="/static/img/singer-690117_640.jpg" alt="" class="">
+                </figure>
+                <div class="media w-100 my-3">
+                    <figure class="avatar avatar-40 rounded-circle align-self-start ">
+                        <label class="checkbox-user-check">
+                            <input type="checkbox">
+                            <i class="material-icons">check</i>
+                        </label>
+                        <img src="/static/img/user1.png" alt="Generic placeholder image">
+                    </figure>
+                    <div class="media-body mx-70">
+                        <h5 class="time-title mb-0 text-white">名字/请登录</h5>
+                        <p class="mb-0 text-truncate text-white">邮箱</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>算力浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pool" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/poolIntroduce" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池介绍</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/buyPower" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>购买算力介绍</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">filter_none</i> <span>登录/注册</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/signall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>登录</span></a>
+                            <a href="/registall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>注册</span></a>
+                            <a href="/forgetpassword" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>忘记密码</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_emoticon</i> <span>我的</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/poweruser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>钱包信息</span></a>
+                            <a href="/pooluser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>提交信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">description</i> <span>联系我们</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="form_credit_card.html" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>公司信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="backdrop"></div>
+        <!-- sidebar right ends -->
+        <!-- content page -->
+        <div class="carosel swiper-location-carousel bg-dark background-img position-fixed">
+            <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="0" data-slides-per-view="1" class="swiper-container swiper-init swiper-signin h-100">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center ">
+                        <div class="background-img"><img src="/static/img/banner.png" alt="" class="w-100"></div>
+                    </div>
+                    <div class="swiper-slide text-center">
+                        <div class="background-img"><img src="/static/img/banner2.png" alt="" class="w-100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container h-100 h-sm-auto align-items-center">
+            <div class="row align-items-center h-100 h-sm-auto">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto text-center">
+                    <h1 class="font-weight-light mb-3 text-white text-center">我们是<span class="font-weight-normal">耘存科技</span></h1>
+                    <h4 class="font-weight-light mb-4 text-white text-center">欢迎注册耘存科技算力系统</h4>
+                    <div class="card mb-4">
+                        <div class="card-body p-0">
+                            <!--用户名-->
+                            <label for="name" class="sr-only">用户名</label>
+                            <input type="email" id="name" class="form-control text-center form-control-lg border-0" placeholder="用户名" required="" autofocus=""/>
+                            <div id="xs" style="color:red"></div>
+                            <hr class="my-0">
+                            <!--邮箱-->
+                            <label for="inputEmail" class="sr-only">邮箱</label>
+                            <input type="email" id="inputEmail" class="form-control text-center form-control-lg border-0" placeholder="邮箱" required="">
+                            <hr class="my-0">
+                            <!--输入密码-->
+                            <label for="inputPassword" class="sr-only">输入密码</label>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr align="center">
+                                   <td id="pwd_Weak" class="pwd pwd_c"> </td>
+                                   <td id="pwd_Medium" class="pwd pwd_c pwd_f"></td>
+                                   <td id="pwd_Strong" class="pwd pwd_c pwd_c_r"> </td>
+                                </tr>
+                             </table>
+                             <span id="err_msgPsw"></span>
+                            <input type="password" onkeyup="CheckQiang(this.value)" id="inputPassword" class="form-control text-center form-control-lg border-0" placeholder="输入密码(请输入6~16位字符)" required="">
+                            <hr class="my-0">
+                            <!--再次输入密码-->
+                            <label for="inputPassword2" class="sr-only">再次输入密码</label>
+                            <input type="password" id="inputPassword2" class="form-control text-center form-control-lg border-0" placeholder="再次输入密码" required="">
+                            <hr class="my-0">
+                            <!--输入验证码-->
+                            <input type="text" id="code_input" value="" placeholder="请输入验证码" class="form-control text-center form-control-lg border-0"/>
+                            <div id="v_container" style="width: 200px;height: 50px; margin: 0 auto;"></div>
+                        </div>
+                    </div>
+                    <div class="my-4 row">
+                        <div class="col-12  text-center">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck111" checked>
+                                <label class="custom-control-label text-white" for="customCheck111">接受 <a href="">我们的权力和条款</a>.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button id="my_button"class=" btn btn-primary pink-gradient">验证</button>
+                        <a class=" btn btn-primary pink-gradient" onclick="mr_verify()" value="注册">注册</a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- content page ends -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="http://cdn.bootstrapmb.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Cookie jquery file -->
+    <script src="/static/vendor/cookie/jquery.cookie.js"></script>
+    <!-- swiper slider jquery file -->
+    <script src="/static/vendor/swiper/js/swiper.min.js"></script>
+    <!-- Application main common jquery file -->
+    <script src="/static/js/main.js"></script>
+    <!-- page specific script -->
+    <!--图形验证码-->
+    <script src="js/gVerify.js"></script>
+    <script>
+        var verifyCode = new GVerify("v_container");
+        document.getElementById("my_button").onclick = function(){
+            var res = verifyCode.validate(document.getElementById("code_input").value);
+            if(res){
+                alert("aaa")
+                
+            }else{
+                alert("验证码错误");
+            }
+        }
+    </script>
+
+    <script> 
+    function CheckQiang(pwd){
+        var Mcolor,Wcolor,Scolor;
+      var m=0;
+      var Modes=0;
+      for(var i=0; i<pwd.length; i++){
+         var charType=0;  // 字符类型 ASCII类型
+         var t=pwd.charCodeAt(i);  //返回字符串pwd第i个字符的 Unicode 编码
+         if(t>=48 && t <=57){charType=1;}
+         else if(t>=65 && t <=90){charType=2;}
+         else if(t>=97 && t <=122){charType=4;}
+         else{charType=4;}
+         Modes |= charType;
+      }
+      for(var i=0;i<4;i++){
+         if(Modes & 1){m++;}
+         Modes>>>=1;
+      }
+      if(pwd.length<=4){m=1;}
+      if(pwd.length<=0){m=0;}
+      switch(m){
+         case 1 :                       // 如果输入的密码位数少于5位，那么就判定为弱
+            Wcolor="pwd pwd_Weak_c";    //如果输入的密码只由数字、小写字母、大写字母或其它特殊符号当中的一种类型组成，则判定为弱
+            Mcolor="pwd pwd_c";
+            Scolor="pwd pwd_c pwd_c_r";
+            document.getElementById("err_msgPsw").style.color="red";
+            document.getElementById("err_msgPsw").style.display="block";
+            document.getElementById("err_msgPsw").innerHTML = "*您的密码强度太弱了";
+            break;
+         case 2 :   //如果密码由数字、小写字母、大写字母或其它特殊符号当中的两种类型组成，则判定为中
+            Wcolor="pwd pwd_Medium_c";
+            Mcolor="pwd pwd_Medium_c";
+            Scolor="pwd pwd_c pwd_c_r";
+            document.getElementById("err_msgPsw").style.color="	Green";
+            document.getElementById("err_msgPsw").style.display="block";
+            document.getElementById("err_msgPsw").innerHTML = "*您的密码强度一般";
+            break;
+         case 3 : //如果密码由数字、小写字母、大写字母或其它特殊符号当中的三种类型以上组成，则判定为强
+            Wcolor="pwd pwd_Strong_c";
+            Mcolor="pwd pwd_Strong_c";
+            Scolor="pwd pwd_Strong_c pwd_Strong_c_r";
+            document.getElementById("err_msgPsw").style.color="black";
+            document.getElementById("err_msgPsw").innerHTML = "*您的密码很强 很不错！";
+            break;
+         default :
+            Wcolor="pwd pwd_c";
+            Mcolor="pwd pwd_c pwd_f";
+            Scolor="pwd pwd_c pwd_c_r";
+            document.getElementById("err_msgPsw").style.display="none";
+            break;
+      }
+      document.getElementById('pwd_Weak').className=Wcolor;
+      document.getElementById('pwd_Medium').className=Mcolor;
+      document.getElementById('pwd_Strong').className=Scolor;
+    }
+    function mr_verify(){
+ 
+        //获取表单对象
+        var name=document.getElementById("name")
+        var mail=document.getElementById("inputEmail");
+        var password=document.getElementById("inputPassword");
+        var passwordRepeat=document.getElementById("inputPassword2");
+        var tel=document.getElementById("tel");
+
+        //验证项目是否为空
+        if(name.value==='' || name.value===null){
+            alert("用户名不能为空！");
+                //document.getElementById("name").setAttribute("placeholder","新文本内容");
+            return;
+        }
+        if(mail.value==='' || mail.value===null){
+            alert("邮箱不能为空！");
+            return;
+        }
+        if(password.value==='' || password.value===null){
+            alert("密码不能为空！");
+            return;
+        }
+        if(passwordRepeat.value==='' || passwordRepeat.value===null){
+            alert("确认密码不能为空！");
+            return;
+        }
+        // if(tel.value==='' || tel.value===null){
+        //     alert("手机号码不能为空！");
+        //     return;
+        // }
+
+        if(password.value!==passwordRepeat.value ){
+            alert("密码设置前后不一致！");
+            return;
+        }
+        
+        //验证邮件格式
+        apos = mail.value.indexOf("@")
+        dotpos = mail.value.lastIndexOf(".")
+        if (apos < 1 || dotpos - apos < 2) {
+            alert("邮箱格式错误！");
+            return
+        }
+        
+        // //验证手机号格式
+        // if(isNaN(tel.value)){
+        //     alert("手机号请输入数字！");
+        //     return;
+        // }
+        // if(tel.value.length!==11){
+        //     alert("手机号是11个数字！");
+        //     return;
+        // }
+        $.ajax({
+            type:"GET",
+            url:"http://47.100.10.123:10080/user/user_regist",
+            async:false,
+            dataType:'json',
+            data:{
+                mail:$("#inputEmail").val(),
+                name:$("#name").val(),
+                password:$("#inputPassword").val() 
+                },
+            success:function(data){
+               console.log(data);
+                if(data==1){
+                    $("#xs").text("该用户名已经存在!");                 
+                    console.log("222")
+                }else{
+                    console.log("333")
+                    $("#msg").html(data);
+                    $("#shiBai").html("");
+                    window.location.href="/";//注册之后跳转到登录
+              }
+            }
+        })
+    }
+
+    
+    'use strict';
+    var mySwiper = new Swiper('.swiper-signin', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+    </script>
+</body>
+
+</html>

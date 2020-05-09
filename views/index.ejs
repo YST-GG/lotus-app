@@ -1,0 +1,683 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <!-- favicons -->
+    <link type="text/css" rel="apple-touch-icon" href="static/bootstrap/img/favicon-apple.png">
+    <link type="text/css" rel="icon" href="/static/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="http://cdn.bootstrapmb.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Material design icons CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/materializeicon/material-icons.css">
+    <!-- aniamte CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/animatecss/animate.css">
+    <!-- swiper carousel CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/swiper/css/swiper.min.css">
+    <!-- daterange CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/bootstrap-daterangepicker-master/daterangepicker.css">
+    <!-- footable CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/footable-bootstrap/css/footable.bootstrap.min.css">
+    <!-- Bootstra tour CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/bootstrap_tour/css/bootstrap-tour-standalone.css">
+    <!-- jvector map CSS -->
+    <link type="text/css" rel="stylesheet" href="/static/vendor/jquery-jvectormap/jquery-jvectormap-2.0.3.css">
+    <!-- app CSS -->
+    <link id="theme" rel="stylesheet" href="/static/css/purplesidebar.css" type="text/css">
+    <title>耘存科技 - Mobile</title>
+</head>
+
+<body class="fixed-header sidebar-right-close sidebar-left-close">
+    <!-- page loader -->
+    <div class="loader justify-content-center pink-gradient">
+        <div class="align-self-center text-center">
+            <div class="logo-img-loader">
+                <img src="/static/img/loader-hole.png" alt="" class="logo-image">
+                <img src="/static/img/loader-bg.png" alt="" class="logo-bg-image">
+            </div>
+            <h2 class="mt-3 font-weight-light">耘存<br><small>- 手机端 -</small></h2>
+            <p class="mt-2 text-white"></p>
+        </div>
+    </div>
+    <!-- page loader ends  -->
+    <div class="wrapper">
+        <!-- main header -->
+        <!-- main header -->
+        <header class="main-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-auto px-0">
+                        <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
+                        <a href="index.ejs" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
+                        </a>
+                        <form class="search-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col px-0 text-right">
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">mail_outline</i>
+                                <span class="status-number bg-danger text-white">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0" aria-labelledby="dropdownmessage">
+                                <div class="arrow pink-gradient"></div>
+                                <div class="pink-gradient py-3 text-center">
+                                    <h5 class="mb-0">消息</h5>
+                                    <p class="mb-0">最新消息</p>
+                                </div>
+                                <div class="media new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息1</h5>
+                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <a href="">Reply</a>
+                                        <a href="" class="ml-2">View</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="media pink-gradient-active new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="my-0">消息2</h5>
+                                        <small class="text-muted d-block mb-2">2:05 am</small>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user2.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息3<small class="text-muted float-right">4:05 am</small></h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <figure class="userpic"><img src="/static/img/user1.png" alt=""></figure>
+                                <h5 class="text-hide-xs">
+                                    <small class="header-color-secondary"></small>
+                                    <span class="header-color-primary"></span>
+                                </h5>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown" aria-labelledby="dropdownMenuLink">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a href="profile.html">
+                                            <figure class="avatar avatar-120 mx-auto my-3">
+                                                <img src="/static/img/user1.png" alt="">
+                                            </figure>
+                                            <h5 class="card-title mb-2 header-color-primary">John McMohan</h5>
+                                            <h6 class="card-subtitle mb-3 header-color-secondary">South Africa</h6>
+                                        </a>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <button class="btn btn-sm pink-gradient border-0 mb-3">Edit</button>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);" id="open-right-sidebar">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Setting
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="header-color-secondary ml-2"><i class="material-icons vm">settings</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            5458 <small class="header-color-secondary font-italic">Points Collected</small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="header-color-secondary material-icons vm">local_play</i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="signall.ejs">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Logout
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main header ends -->
+        <!-- sidebar left -->
+        <div class="sidebar sidebar-left">
+            <div class="container has-background-img">
+                <figure class="background-img pink-gradient">
+                    <img src="/static/img/singer-690117_640.jpg" alt="" class="">
+                </figure>
+                <div class="media w-100 my-3">
+                    <figure class="avatar avatar-40 rounded-circle align-self-start ">
+                        <label class="checkbox-user-check">
+                            <input type="checkbox">
+                            <i class="material-icons">check</i>
+                        </label>
+                        <img src="/static/img/user1.png" alt="Generic placeholder image">
+                    </figure>
+                    <div class="media-body mx-70">
+                        <h5 class="time-title mb-0 text-white">名字/请登录</h5>
+                        <p class="mb-0 text-truncate text-white">邮箱</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>算力浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pool" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/poolIntroduce" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池介绍</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/buyPower" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>购买算力介绍</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">filter_none</i> <span>登录/注册</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/signall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>登录</span></a>
+                            <a href="/registall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>注册</span></a>
+                            <a href="/forgetpassword" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>忘记密码</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_emoticon</i> <span>我的</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/poweruser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>钱包信息</span></a>
+                            <a href="/pooluser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">description</i> <span>联系我们</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="form_credit_card.ejs" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>公司信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="backdrop"></div>
+        <!-- sidebar left ends -->
+        <!-- content page title -->
+        <div class="container-fluid bg-light-opac">
+            <div class="row">
+                <div class="container my-3 main-container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h2 class="content-color-primary page-title">Lotus Dashboard</h2>
+                            <p class="content-color-secondary page-sub-title">打造新一代分布式存储网络</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content page title ends -->
+        <!-- content page -->
+        <div class="container mt-4 main-container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">区块高度</p>
+                                    <h4 class="content-color-primary mb-3" id="height"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-success col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">全网总存力</p>
+                                    <h4 class="content-color-primary mb-3" id="networkStorage"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-danger col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">活跃节点数</p>
+                                    <h4 class="content-color-primary mb-3" id="activeNodes"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">交易手续费</p>
+                                    <h4 class="content-color-primary mb-3" id="averagePrice"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">抵押数量</p>
+                                    <h4 class="content-color-primary mb-3" id="pledgeCollateral"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-warning col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <p class="content-color-secondary mb-0">平均出块时间</p>
+                                    <h4 class="content-color-primary mb-3" id="averageBlocktime"></h4>
+                                </div>
+                            </div>
+                            <div class="progress progress-small">
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="card rounded-0 border-0 mb-3">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5 class="card-title mb-0">Tipset 数据</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Height</th>
+                                        <th scope="col">Tipset</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="card rounded-0 border-0 mb-3">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h5 class="card-title mb-0">矿工排名</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">矿工名字</th>
+                                        <th scope="col">算力</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="container mt-4 main-container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card mb-4 fullscreen">
+                            <div class="card-header">
+                                <div class="media">
+                                    <div class="col-8">
+                                        <h5 class="card-title mb-0">全网矿工数据</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table class="table " id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>矿工名字</th>
+                                            <th>在线时间</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd">
+                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Strobarry milk
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td </tr> <tr class="odd">
+                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="odd">
+                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                        <tr class="even ">
+                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                            </td>
+                                            <td>infoatmaxartkiller.in</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- /.table-responsive -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content page ends -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/popper.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootstrapmb.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Cookie jquery file -->
+    <script type="text/javascript" src="/static/vendor/cookie/jquery.cookie.js"></script>
+    <!-- sparklines chart jquery file -->
+    <script type="text/javascript" src="/static/vendor/sparklines/jquery.sparkline.min.js"></script>
+    <!-- Circular progress gauge jquery file -->
+    <script type="text/javascript" src="/static/vendor/circle-progress/circle-progress.min.js"></script>
+    <!-- Swiper carousel jquery file -->
+    <script type="text/javascript" src="/static/vendor/swiper/js/swiper.min.js"></script>
+    <!-- Chart js jquery file -->
+    <script type="text/javascript" src="/static/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script type="text/javascript"  src="/static/vendor/chartjs/utils.js"></script>
+    <!-- Footable jquery file -->
+    <script type="text/javascript" src="/static/vendor/footable-bootstrap/js/footable.min.js"></script>
+    <!-- datepicker jquery file -->
+    <script type="text/javascript" src="/static/vendor/bootstrap-daterangepicker-master/moment.js"></script>
+    <script type="text/javascript" src="/static/vendor/bootstrap-daterangepicker-master/daterangepicker.js"></script>
+    <!-- jVector map jquery file -->
+    <script type="text/javascript" src="/static/vendor/jquery-jvectormap/jquery-jvectormap.js"></script>
+    <script type="text/javascript" src="/static/vendor/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- Bootstrap tour jquery file -->
+    <script type="text/javascript" src="/static/vendor/bootstrap_tour/js/bootstrap-tour-standalone.min.js"></script>
+    <!-- jquery toast message file -->
+    <script type="text/javascript" src="/static/vendor/jquery-toast-plugin-master/dist/jquery.toast.min.js"></script>
+    <!-- Application main common jquery file -->
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <!-- page specific script -->
+    <script type="text/javascript" src="/static/js/dashboard.js"></script>
+    <!-- page specific script -->
+    <script type="text/javascript">
+    "use script";
+    $(window).on('load', function() {
+        var tour = new Tour({
+            steps: [{
+                element: "#left-menu",
+                title: "Main Menu",
+                content: "Access the demo pages from sidebar",
+                smartPlacement: true,
+                storage: false
+            }, {
+                element: "button[data-target='#createOrder']",
+                title: "Creative Form",
+                content: "See beautifully designed form in modal",
+                smartPlacement: true,
+                placement: "left",
+                storage: false
+
+            }, {
+                element: ".close-sidebar",
+                title: "Customizaton Menu",
+                content: "Customize your Layout style",
+                smartPlacement: true,
+                placement: "left",
+                storage: false
+
+            }]
+
+        });
+        // Initialize the tour
+        tour.init();
+
+        // Start the tour
+        tour.start();
+
+    });
+     $(function(){
+     $.ajax({
+              type: "GET",
+              url: "http://47.100.10.123:10080/lotus/lotus_message",
+              data: '',
+              dataType: "json",
+              success: function(json){
+              var i = 0;
+              var temp = 0;
+               for(i;json.networkStorage>1024;i++)
+               {
+                 json.networkStorage = parseInt(json.networkStorage)/1024.00;
+               }
+               temp =  json.networkStorage;
+               switch (i) {
+                 case 0: temp = temp +"B";
+                         break;
+                 case 1: temp = temp + "KB";
+                         break;
+                 case 2: temp = temp + "MB";
+                         break;
+                 case 3: temp = temp + "GB";
+                         break;
+                 case 4: temp = temp + "TB";
+                         break;
+                 case 5: temp = temp + "PB";
+                         break;
+                 case 6: temp = temp + "ZB";
+                         break;
+               }
+
+               $("#height").html(json.blockHeight);
+               $("#averagePrice").html(json.averagePrice);
+               $("#averageBlocktime").html(json.averageBlocktime + "s");
+               $("#pledgeCollateral").html(json.pledgeCollateral);
+               $("#activeNodes").html(json.activeNodes);
+               $("#networkStorage").html(temp);
+              }
+       });
+       });
+
+
+    </script>
+</body>
+
+</html>

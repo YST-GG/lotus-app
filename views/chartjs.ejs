@@ -1,0 +1,1387 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" href="img/favicon-apple.png">
+    <link rel="icon" href="img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://cdn.bootstrapmb.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="vendor/materializeicon/material-icons.css">
+    <!-- aniamte CSS -->
+    <link rel="stylesheet" href="vendor/animatecss/animate.css">
+    <!-- swiper carousel CSS -->
+    <link rel="stylesheet" href="vendor/swiper/css/swiper.min.css">
+    <!-- daterange CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap-daterangepicker-master/daterangepicker.css">
+    <!-- footable CSS -->
+    <link rel="stylesheet" href="vendor/footable-bootstrap/css/footable.bootstrap.min.css">
+    <!-- jvector map CSS -->
+    <link rel="stylesheet" href="vendor/jquery-jvectormap/jquery-jvectormap-2.0.3.css">
+    <!-- app CSS -->
+    <link id="theme" rel="stylesheet" href="css/purplesidebar.css" type="text/css">
+    <title>GoTRI - Mobile</title>
+</head>
+
+<body class="fixed-header sidebar-right-close sidebar-left-close">
+    <!-- page loader -->
+    <div class="loader justify-content-center pink-gradient">
+        <div class="align-self-center text-center">
+            <div class="logo-img-loader">
+                <img src="img/loader-hole.png" alt="" class="logo-image">
+                <img src="img/loader-bg.png" alt="" class="logo-bg-image">
+            </div>
+            <h2 class="mt-3 font-weight-light">GoTRI<br><small>- M O B I L E -</small></h2>
+            <p class="mt-2 text-white">Awesome things getting ready...</p>
+        </div>
+    </div>
+    <!-- page loader ends  -->
+    <div class="wrapper">
+        <!-- main header -->
+        <header class="main-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-auto px-0">
+                        <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
+                        <a href="index.html" class="logo"><img src="img/logo-icon.png" alt=""><span class="text-hide-xs"><b>Go</b>TRI<br><span class="small">- M O B I L E -</span></span>
+                        </a>
+                        <form class="search-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                    <button class="btn " type="button"><i class="material-icons">search</i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col px-0 text-right">
+                        <button class="btn btn-search btn-icon header-color-secondary" type="button"><i class="material-icons">search</i></button>
+                        <div class="dropdown d-inline-block text-hide-xs">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <figure class="avatar avatar-24 vm d-inline-block border"><img src="img/india.png" alt=""></figure>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownmessage2">
+                                <div class="dropdown-item">
+                                    <figure class="avatar avatar-24 mr-2 vm d-inline-block"><img src="img/india.png" alt=""></figure> India
+                                </div>
+                                <div class="dropdown-item">
+                                    <figure class="avatar avatar-24 mr-2 vm d-inline-block"><img src="img/canada.png" alt=""></figure> Canada
+                                </div>
+                                <div class="dropdown-item">
+                                    <figure class="avatar avatar-24 mr-2 vm d-inline-block"><img src="img/unitedstates.png" alt=""></figure> United States
+                                </div>
+                                <div class="dropdown-item">
+                                    <figure class="avatar avatar-24 mr-2 vm d-inline-block"><img src="img/uk.png" alt=""></figure> United Kingdom
+                                </div>
+                                <div class="dropdown-item">
+                                    <figure class="avatar avatar-24 mr-2 vm d-inline-block"><img src="img/china.png" alt=""></figure> China
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">mail_outline</i>
+                                <span class="status-number bg-danger text-white">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0" aria-labelledby="dropdownmessage">
+                                <div class="arrow pink-gradient"></div>
+                                <div class="pink-gradient py-3 text-center">
+                                    <h5 class="mb-0">Messages</h5>
+                                    <p class="mb-0">Just Recieved Messages</p>
+                                </div>
+                                <div class="media new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user2.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Alizee Johnson</h5>
+                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <a href="">Reply</a>
+                                        <a href="" class="ml-2">View</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="media pink-gradient-active new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="my-0">Donald Costapor </h5>
+                                        <small class="text-muted d-block mb-2">2:05 am</small>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user2.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Alizee McMohan <small class="text-muted float-right">4:05 am</small></h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown text-hide-lg d-inline-block">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownnotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">notifications_none</i>
+                                <span class="status-dot pink-gradient"></span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown" aria-labelledby="dropdownnotification">
+                                <a href="#" class="media  pink-gradient-active new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user1.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media  pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user1.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media  pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="img/user1.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">Media heading</h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <figure class="userpic"><img src="img/user1.png" alt=""></figure>
+                                <h5 class="text-hide-xs">
+                                    <small class="header-color-secondary">Welcome,</small>
+                                    <span class="header-color-primary">John McMohan</span>
+                                </h5>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown" aria-labelledby="dropdownMenuLink">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a href="profile.html">
+                                            <figure class="avatar avatar-120 mx-auto my-3">
+                                                <img src="img/user1.png" alt="">
+                                            </figure>
+                                            <h5 class="card-title mb-2 header-color-primary">John McMohan</h5>
+                                            <h6 class="card-subtitle mb-3 header-color-secondary">South Africa</h6>
+                                        </a>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <button class="btn btn-sm pink-gradient border-0 mb-3">Edit</button>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);" id="open-right-sidebar">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Setting
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="header-color-secondary ml-2"><i class="material-icons vm">settings</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            5458 <small class="header-color-secondary font-italic">Points Collected</small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="header-color-secondary material-icons vm">local_play</i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="signin1.html">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Logout
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main header ends -->
+        <!-- sidebar left -->
+        <div class="sidebar sidebar-left">
+            <div class="container has-background-img">
+                <figure class="background-img pink-gradient">
+                    <img src="img/singer-690117_640.jpg" alt="" class="">
+                </figure>
+                <div class="media w-100 my-3">
+                    <figure class="avatar avatar-40 rounded-circle align-self-start ">
+                        <label class="checkbox-user-check">
+                            <input type="checkbox">
+                            <i class="material-icons">check</i>
+                        </label>
+                        <img src="img/user1.png" alt="Generic placeholder image">
+                    </figure>
+                    <div class="media-body mx-70">
+                        <h5 class="time-title mb-0 text-white">John Smith</h5>
+                        <p class="mb-0 text-truncate text-white">johnsmith@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Production</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ecommerce.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>eCommerce</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="networking.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Networking</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="finance.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Finance</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="social.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Social</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="todo.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>ToDo</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">filter_none</i> <span>App Pages</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="profile.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Profile</span></a>
+                            <a href="mail.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Mail</span></a>
+                            <a href="chat.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Chat</span></a>
+                            <a href="contactus1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Contact Us</span></a>
+                            <a href="contactus2.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Contact Us 2</span></a>
+                            <a href="team.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Team</span></a>
+                            <a href="about.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>About</span></a>
+                            <a href="blog.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Blog</span></a>
+                            <a href="blog-details.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Blog Details</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">shopping_cart</i> <span>eCommerce</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="product-blocks.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Products</span></a>
+                            <a href="product-details.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Product Detail</span></a>
+                            <a href="cart.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Cart</span></a>
+                            <a href="payment-info.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Payment/Info</span></a>
+                            <a href="invoice.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Invoice</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">assignment</i> <span>Other Pages</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="signin1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Sign in</span></a>
+                            <a href="signin2.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Sign in 2</span></a>
+                            <a href="signup1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Sign up</span></a>
+                            <a href="signup2.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Sign up 2</span></a>
+                            <a href="error1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Error</span></a>
+                            <a href="error-4041.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>404</span></a>
+                            <a href="error-4042.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>404 2</span></a>
+                            <a href="error-5001.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>500</span></a>
+                            <a href="error-5002.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>500 2</span></a>
+                            <a href="comming-soon1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Comming Soon</span></a>
+                            <a href="comming-soon2.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Comming Soon 2</span></a>
+                            <a href="faqs1.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>FAQs</span></a>
+                            <a href="faqs2.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>FAQs 2</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">equalizer</i> <span>Charts & Map</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="chartjs.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Chart js</span></a>
+                            <a href="sparklines.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Sparklines</span></a>
+                            <a href="vectormap-blocks.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>jVector map</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">devices</i> <span>Layouts</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="boxed-layout.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Boxed layout</span></a>
+                            <a href="full-width.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Full width</span></a>
+                            <a href="colors.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Color Scheme</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_emoticon</i> <span>Icons</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="material-icons.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Material Icons</span></a>
+                            <a href="icon-style.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Icons Style</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">business_center</i> <span>Controls</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="card-blocks.html" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>Card Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="carousel-blocks.html"><i class="material-icons icon"></i> <span>Carousel Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="chart-blocks.html"><i class="material-icons icon"></i> <span>Charts Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="chat-blocks.html"><i class="material-icons icon"></i> <span>Chat Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="event-blocks.html"><i class="material-icons icon"></i> <span>Event Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="large-dropdown.html"><i class="material-icons icon"></i> <span>Large Dropdowns</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="file-blocks.html"><i class="material-icons icon"></i> <span>File Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="media-blocks.html"><i class="material-icons icon"></i> <span>Media Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="navbar-blocks.html"><i class="material-icons icon"></i> <span>Navbar Block</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="news-blocks.html"><i class="material-icons icon"></i> <span>News Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="pricing-blocks.html"><i class="material-icons icon"></i> <span>Pricing Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="product-blocks.html"><i class="material-icons icon"></i> <span>Product Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="progress-range-blocks.html"><i class="material-icons icon"></i> <span>Progress and Range</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="rating-blocks.html"><i class="material-icons icon"></i> <span>Rating Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="summary-blocks.html"><i class="material-icons icon"></i> <span>Summary Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="timeline-blocks.html"><i class="material-icons icon"></i> <span>Timeline Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="user-blocks.html"><i class="material-icons icon"></i> <span>User Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="userlist-blocks.html"><i class="material-icons icon"></i> <span>Userlist Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="wizard-blocks.html"><i class="material-icons icon"></i> <span>Wizard Blocks</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="alerts.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Alerts</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="badges.html"><i class="material-icons icon"></i> <span>Badges</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="breadcrumb.html"><i class="material-icons icon"></i> <span>Breadcrumb</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="buttons.html"><i class="material-icons icon"></i> <span>Buttons</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="button-group.html"><i class="material-icons icon"></i> <span>Button Group</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="dropdown.html"><i class="material-icons icon"></i> <span>Dropdown</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form-elements.html"><i class="material-icons icon"></i> <span>Form Elements</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="collapse.html"><i class="material-icons icon"></i> <span>Collapse</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="input-group.html"><i class="material-icons icon"></i> <span>Input Group</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="jumbotron.html"><i class="material-icons icon"></i> <span>Jumbotron</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="pagination.html"><i class="material-icons icon"></i> <span>Pagination</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="popover.html"><i class="material-icons icon"></i> <span>Popover</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="tooltip.html"><i class="material-icons icon"></i> <span>Tooltip</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="modal.html"><i class="material-icons icon"></i> <span>Modal</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">web</i> <span>Rich Controls</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link  pink-gradient-active" href="multiselect.html"><i class="material-icons icon"></i> <span>Multi Select</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="picker.html"><i class="material-icons icon"></i> <span>Picker</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="autocomplete.html"><i class="material-icons icon"></i> <span>AutoComplete</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="contextmenu.html"><i class="material-icons icon"></i> <span>Context Menu</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="editor.html"><i class="material-icons icon"></i> <span>Editor</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="toast-message.html"><i class="material-icons icon"></i> <span>Toast message</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="dragable_sortable.html"><i class="material-icons icon"></i> <span>Dragable Sortable</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="tourintro.html"><i class="material-icons icon"></i> <span>Tour Intro</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="dropzone.html"><i class="material-icons icon"></i> <span>DropZone</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">description</i> <span>Forms</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="form_credit_card.html" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>Credit Card</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_donation.html"><i class="material-icons icon"></i> <span>Donation Form</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_authorization.html"><i class="material-icons icon"></i> <span>Authority Form</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_employee_review.html"><i class="material-icons icon"></i> <span>Employee Review</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_profile_info.html"><i class="material-icons icon"></i> <span>Profile</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_survay_review.html"><i class="material-icons icon"></i> <span>Survay Form</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pink-gradient-active" href="form_booking.html"><i class="material-icons icon"></i> <span>Booking Form</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">grid_on</i> <span>Tables</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="datatable.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>DataTable</span></a>
+                            <a href="footable.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>FooTable</span></a>
+                            <a href="table-blocks.html" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Table</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">domain</i> <span>Level 1</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Level 2</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:void(0);" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Level 2</span></a>
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a href="javascript:void(0);" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>Level 3</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="backdrop"></div>
+        <!-- sidebar left ends -->
+        <!-- sidebar right -->
+        <div class="sidebar sidebar-right">
+            <button type="button" class="btn close-sidebar"><i class="material-icons">settings</i></button>
+            <div class="row mx-0 pt-2">
+                <div class="col-12">
+                    <p class="sidebar-color-primary page-sub-title-small">
+                        <span class="icon-circle mr-2">
+                            <i class="material-icons">settings</i>
+                        </span>Visual Style Setting</p>
+                    <p class="sidebar-color-secondary">We provide wide range of color scheme to change from</p>
+                    <div class="row">
+                        <ul class="list-group border-top border-bottom list-group-flush w-100">
+                            <li class="list-group-item">
+                                <span class="vm">Boxed Layout</span>
+                                <input type="checkbox" id="boxlayout" class="switch switch-sm">
+                                <label for="boxlayout" class="pink-gradient float-right"></label>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="vm">Full Container</span>
+                                <input type="checkbox" id="full-width2" class="switch switch-sm">
+                                <label for="full-width2" class="pink-gradient float-right"></label>
+                                <p class="sidebar-color-secondary mt-2 mb-0"><small>Container will be full width in big screen</small></p>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="vm">RTL</span>
+                                <input type="checkbox" id="rtl" class="switch switch-sm">
+                                <label for="rtl" class="pink-gradient float-right"></label>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="vm">Icon Sidebar</span>
+                                <input type="checkbox" id="iconsibarbar" class="switch switch-sm">
+                                <label for="iconsibarbar" class="pink-gradient float-right"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="sidebar-color-primary page-sub-title-small mt-2"><span class="icon-circle mr-2"><i class="material-icons">palette</i></span>Select Color</p>
+                    <div class="row">
+                        <ul class="list-group list-group-flush w-100">
+                            <li class="list-group-item">
+                                <div class="theme-color">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label bg-white" for="customRadio1" data-title="style"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-blue" for="customRadio2" data-title="dark-blue"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-purple" for="customRadio3" data-title="dark-purple"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio4" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-maroon" for="customRadio4" data-title="dark-maroon"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio5" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-grey" for="customRadio5" data-title="dark-grey"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio6" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-pink" for="customRadio6" data-title="dark-pink"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio7" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-brown" for="customRadio7" data-title="dark-brown"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio8" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label dark-green" for="customRadio8" data-title="dark-green"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label red" for="customRadio1mat" data-title="red"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2mat" name="style-sheet-color" class="custom-control-input" checked>
+                                        <label class="custom-control-label purple" for="customRadio2mat" data-title="purple"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio4mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label blue" for="customRadio4mat" data-title="blue"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio6mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label skyblue" for="customRadio6mat" data-title="skyblue"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio5mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label teal" for="customRadio5mat" data-title="teal"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio7mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label orange" for="customRadio7mat" data-title="orange"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio3mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label brown" for="customRadio3mat" data-title="brown"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio8mat" name="style-sheet-color" class="custom-control-input">
+                                        <label class="custom-control-label grey" for="customRadio8mat" data-title="grey"></label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <ul class="list-group border-top border-bottom list-group-flush w-100">
+                            <li class="list-group-item">
+                                <span class="vm">Sidebar Colored</span>
+                                <input type="checkbox" id="sidebarfill" class="switch switch-sm" checked>
+                                <label for="sidebarfill" class="pink-gradient float-right"></label>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="vm">Header Colored</span>
+                                <input type="checkbox" id="headerfill" class="switch switch-sm">
+                                <label for="headerfill" class="pink-gradient float-right"></label>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="vm">Full Colored</span>
+                                <input type="checkbox" id="fullcolorfill" class="switch switch-sm">
+                                <label for="fullcolorfill" class="pink-gradient float-right"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="sidebar-color-primary page-sub-title-small mt-2"><span class="icon-circle mr-2"><i class="material-icons">photo_library</i></span> Background Image</p>
+                    <div class="row">
+                        <ul class="list-group list-group-flush w-100">
+                            <li class="list-group-item">
+                                <div class="sidebar-image">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio12img" name="background-image-sidebar" class="custom-control-input" checked="">
+                                        <label class="custom-control-label " for="customRadio12img" data-title="none"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio22img" name="background-image-sidebar" class="custom-control-input">
+                                        <label class="custom-control-label " for="customRadio22img" data-title="static/bootstrap/img/sidebar-1.png">
+                                            <img src="static/bootstrap/img/sidebar-11.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio32img" name="background-image-sidebar" class="custom-control-input">
+                                        <label class="custom-control-label " for="customRadio32img" data-title="static/bootstrap/img/sidebar-2.png">
+                                            <img src="static/bootstrap/img/sidebar-12.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio43img" name="background-image-sidebar" class="custom-control-input">
+                                        <label class="custom-control-label " for="customRadio43img" data-title="static/bootstrap/img/sidebar-3.png">
+                                            <img src="static/bootstrap/img/sidebar-13.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio52img" name="background-image-sidebar" class="custom-control-input">
+                                        <label class="custom-control-label " for="customRadio52img" data-title="static/bootstrap/img/sidebar-4.png">
+                                            <img src="static/bootstrap/img/sidebar-14.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio63img" name="background-image-sidebar" class="custom-control-input">
+                                        <label class="custom-control-label " for="customRadio63img" data-title="static/bootstrap/img/sidebar-5.png">
+                                            <img src="static/bootstrap/img/sidebar-15.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="sidebar-color-primary page-sub-title-small "><span class="icon-circle mr-2"><i class="material-icons">gradient</i></span> Sidebar Texture</p>
+                    <div class="row">
+                        <ul class="list-group list-group-flush w-100 mb-4">
+                            <li class="list-group-item">
+                                <div class="sidebar-image">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio14img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio14img" data-title="none"></label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio24img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio24img" data-title="static/bootstrap/img/sidebar-texture1.png">
+                                            <img src="static/bootstrap/img/pattern-1.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio34img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio34img" data-title="static/bootstrap/img/sidebar-texture2.png">
+                                            <img src="static/bootstrap/img/pattern-2.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio44img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio44img" data-title="static/bootstrap/img/sidebar-texture3.png">
+                                            <img src="static/bootstrap/img/pattern-3.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio54img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio54img" data-title="static/bootstrap/img/sidebar-texture4.png">
+                                            <img src="static/bootstrap/img/pattern-4.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio64img" name="background-image-sidebar" class="custom-control-input bg-repeat">
+                                        <label class="custom-control-label " for="customRadio64img" data-title="static/bootstrap/img/sidebar-texture5.png">
+                                            <img src="static/bootstrap/img/pattern-5.png" alt="" class="w-100">
+                                        </label>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar right ends -->
+        <!-- setting sidebar -->
+        <div class="settings-sidebar close-settings-sidebar-backdrop">
+            <button type="button" class="btn close-setting-sidebar pink-gradient"><i class="material-icons">keyboard_arrow_left</i></button>
+            <ul class="nav nav-tabs row no-gutters pink-gradient" role="tablist">
+                <li class="nav-item text-center col">
+                    <a class="nav-link active" id="tabhome1settings-tab" data-toggle="tab" href="#tabhome1settings" role="tab" aria-controls="tabhome1settings" aria-selected="true">
+                        <h5 class="content-color-primary mb-0"><i class="material-icons">chat</i></h5>
+                        <p class="content-color-secondary mb-0 small">Chat</p>
+                    </a>
+                </li>
+                <li class="nav-item text-center col">
+                    <a class="nav-link" id="tabhome2settings-tab" data-toggle="tab" href="#tabhome2settings" role="tab" aria-controls="tabhome2settings" aria-selected="false">
+                        <h5 class="content-color-primary mb-0"><i class="material-icons">settings</i></h5>
+                        <p class="content-color-secondary mb-0 small">Settings</p>
+                    </a>
+                </li>
+                <li class="nav-item text-center col">
+                    <a class="nav-link" id="tabhome3settings-tab" data-toggle="tab" href="#tabhome3settings" role="tab" aria-controls="tabhome3settings" aria-selected="false">
+                        <h5 class="content-color-primary mb-0"><i class="material-icons">notifications</i></h5>
+                        <p class="content-color-secondary mb-0 small">Updates</p>
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tabhome1settings" role="tabpanel" aria-labelledby="tabhome1settings-tab">
+                    <ul class="list-group list-group-flush" id="chat-list">
+                        <li class="list-group-item new">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">John Doe <small class="float-right content-color-secondary">7:05 am</small></h6>
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item new">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Alizee TaCkor<small class="float-right content-color-secondary">8:05 am</small></h6>
+                                    <p>GoTRIis best of everyone else</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item new">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user3.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Denial Torry<small class="float-right content-color-secondary">10:05 am</small></h6>
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">John Doe <small class="float-right content-color-secondary">7:05 am</small></h6>
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Alizee TaCkor<small class="float-right content-color-secondary">8:05 am</small></h6>
+                                    <p>GoTRIis best of everyone else</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user3.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Denial Torry<small class="float-right content-color-secondary">10:05 am</small></h6>
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">John Doe <small class="float-right content-color-secondary">7:05 am</small></h6>
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Alizee TaCkor<small class="float-right content-color-secondary">8:05 am</small></h6>
+                                    <p>GoTRIis best of everyone else</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user3.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Denial Torry<small class="float-right content-color-secondary">10:05 am</small></h6>
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">John Doe <small class="float-right content-color-secondary">7:05 am</small></h6>
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Alizee TaCkor<small class="float-right content-color-secondary">8:05 am</small></h6>
+                                    <p>GoTRIis best of everyone else</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user3.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Denial Torry<small class="float-right content-color-secondary">10:05 am</small></h6>
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">John Doe <small class="float-right content-color-secondary">7:05 am</small></h6>
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Alizee TaCkor<small class="float-right content-color-secondary">8:05 am</small></h6>
+                                    <p>GoTRIis best of everyone else</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-3">
+                                    <img src="img/user3.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    <h6 class="my-0">Denial Torry<small class="float-right content-color-secondary">10:05 am</small></h6>
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="tabhome2settings" role="tabpanel" aria-labelledby="tabhome2settings-tab">
+                    <div class="row mx-0">
+                        <div class="col-12">
+                            <div class="alert alert-success alert-dismissible  mt-2 p-2" role="alert" id="settingalert">
+                                <strong>Congratulation!</strong>
+                                <br>Your setting has been reflected.
+                                <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-0 mt-2">
+                        <div class="col-12">
+                            <p class="page-sub-title-small">
+                                <span class="icon-circle mr-2">
+                                    <i class="material-icons">settings</i>
+                                </span>Application Settings</p>
+                        </div>
+                    </div>
+                    <ul class="list-group  list-group-flush w-100">
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Hide Backdrop</label>
+                            <input type="checkbox" id="hidebackdrop" class="switch switch-sm">
+                            <label for="hidebackdrop" class="pink-gradient float-right"></label>
+                        </li>
+                    </ul>
+                    <div class="row mx-0 mt-2">
+                        <div class="col-12">
+                            <p class="page-sub-title-small">
+                                <span class="icon-circle mr-2">
+                                    <i class="material-icons">mail</i>
+                                </span>Email Settings</p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush w-100">
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Receive Updates</label>
+                            <input type="checkbox" id="dead1" class="switch switch-sm" checked>
+                            <label for="dead1" class="pink-gradient float-right"></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Receive Notification</label>
+                            <input type="checkbox" id="dead2" class="switch switch-sm" checked>
+                            <label for="dead2" class="pink-gradient float-right"></label>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Receive Alerts</label>
+                            <input type="checkbox" id="dead3" class="switch switch-sm">
+                            <label for="dead3" class="pink-gradient float-right"></label>
+                        </li>
+                    </ul>
+                    <div class="row mx-0 mt-2">
+                        <div class="col-12">
+                            <p class="page-sub-title-small">
+                                <span class="icon-circle mr-2">
+                                    <i class="material-icons">person</i>
+                                </span>User Settings</p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush w-100">
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Connection List</label>
+                            <input type="checkbox" id="dead11" class="switch switch-sm">
+                            <label for="dead11" class="pink-gradient float-right"></label>
+                            <hr class="mt-2">
+                            <p class="content-color-secondary small mb-2">Your friends or connection can see your connection list if you allow this setting.</p>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Comments</label>
+                            <input type="checkbox" id="dead21" class="switch switch-sm" checked>
+                            <label for="dead21" class="pink-gradient float-right"></label>
+                            <hr class="mt-2">
+                            <p class="content-color-secondary small mb-2">Your friends or connection can able to comment on your profile and post you have posted or shared if you allow this setting.</p>
+                        </li>
+                        <li class="list-group-item">
+                            <label class="d-inline-block mr-2">Share</label>
+                            <input type="checkbox" id="dead31" class="switch switch-sm" checked>
+                            <label for="dead31" class="pink-gradient float-right"></label>
+                            <hr class="mt-2">
+                            <p class="content-color-secondary small mb-2">Your friends or connection can able to share your post you have posted and written by you only if you allow this setting.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade " id="tabhome3settings" role="tabpanel" aria-labelledby="tabhome3settings-tab">
+                    <div class="row mx-0 mt-0 bg-light">
+                        <div class="col-12">
+                            <div class="card my-3">
+                                <div class="card-body">
+                                    <div class="media">
+                                        <div class="icon-circle icon-50 bg-light-primary mr-3">
+                                            <i class="material-icons">track_changes</i>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="content-color-primary mb-0">Good Job!</h4>
+                                            <p class="content-color-secondary mb-3">System running perfectly.</p>
+                                        </div>
+                                    </div>
+                                    <div class="progress progress-small">
+                                        <div class="progress-bar bg-primary col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="page-sub-title-small">
+                                <span class="icon-circle mr-2">
+                                    <i class="material-icons">av_timer</i>
+                                </span>Application Settings
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush w-100 log-information mt-2">
+                        <li class="list-group-item">
+                            <div class="avatar avatar-15 border-danger"></div>
+                            <p class="content-color-primary">System updated
+                                <br><small class="content-color-secondary">2:02 am</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-warning"></span>
+                            <p class="content-color-primary">New account Created
+                                <br><small class="content-color-secondary">5:02 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-success"></span>
+                            <p class="content-color-primary">Shutdown 2 hours
+                                <br><small class="content-color-secondary">Yesterday | 2:02 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-primary"></span>
+                            <p class="content-color-primary">System updated
+                                <br><small class="content-color-secondary">Yesterday | 1:32 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-dark"></span>
+                            <p class="content-color-primary">icro changes done!
+                                <br><small class="content-color-secondary">14 October 2018 | 2:02 am</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-secondary"></span>
+                            <p class="content-color-primary">icro changes done!
+                                <br><small class="content-color-secondary">14 October 2018 | 2:02 am</small></p>
+                        </li>
+                    </ul>
+                    <br>
+                    <div class="row mx-0 mt-2 bg-light">
+                        <div class="col-12">
+                            <p class="page-sub-title-small">
+                                <span class="icon-circle mr-2">
+                                    <i class="material-icons">av_timer</i>
+                                </span>Application Settings</p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush w-100 log-information bubble-sheet mt-2">
+                        <li class="list-group-item">
+                            <div class="avatar avatar-15 border-danger"></div>
+                            <p class="content-color-primary">System updated
+                                <br><small class="content-color-secondary">2:02 am</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-warning"></span>
+                            <p class="content-color-primary">New account Created
+                                <br><small class="content-color-secondary">5:02 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-success"></span>
+                            <p class="content-color-primary">Shutdown 2 hours
+                                <br><small class="content-color-secondary">Yesterday | 2:02 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-primary"></span>
+                            <p class="content-color-primary">System updated
+                                <br><small class="content-color-secondary">Yesterday | 1:32 pm</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-dark"></span>
+                            <p class="content-color-primary">icro changes done!
+                                <br><small class="content-color-secondary">14 October 2018 | 2:02 am</small></p>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="avatar avatar-15 border-secondary"></span>
+                            <p class="content-color-primary">icro changes done!
+                                <br><small class="content-color-secondary">14 October 2018 | 2:02 am</small></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="settings-sidebar-backdrop pink-gradient"></div>
+        <div class="chat-window">
+            <div class="card">
+                <div class="card-header pink-gradient p-2">
+                    <div class="media">
+                        <figure class="avatar avatar-20 mr-2">
+                            <img src="img/user1.png" alt="Generic placeholder image">
+                        </figure>
+                        <div class="media-body">
+                            <h6 class="text-white mb-0">John McMohan <span class="status vm bg-success"></span></h6>
+                        </div>
+                        <button class="btn btn-link p-0 chat-minmax vm"><i class="material-icons minimizeicon">remove</i><i class="material-icons fullscreenicon">fullscreen</i></button>
+                        <button class="btn btn-link p-0 chat-close vm"><i class="material-icons closeicon">close</i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group chatlist">
+                        <li class="list-group-item ">
+                            <div class="media">
+                                <figure class="avatar avatar-40 mr-2">
+                                    <img src="img/user1.png" alt="Generic placeholder image">
+                                </figure>
+                                <div class="media-body">
+                                    Cras sit amet nibh libero, in gravida nulla.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item chat-you">
+                            <div class="media">
+                                <div class="media-body">
+                                    Cras sit amet nibh libero, in gravida nulla.
+                                </div>
+                                <figure class="avatar avatar-40 ml-2">
+                                    <img src="img/user2.png" alt="Generic placeholder image">
+                                </figure>
+                            </div>
+                        </li>
+                        <li class="list-divider">20 December 2018</li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <div class="media-body">
+                                    Cras sit amet nibh libero, in gravida nulla.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item chat-you">
+                            <div class="media">
+                                <div class="media-body">
+                                    Cras sit amet nibh libero, in gravida nulla.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="media">
+                                <div class="media-body">
+                                    Cras sit amet nibh libero, in gravida nulla.
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text px-1 rounded-0">
+                                <i class="material-icons">mood</i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Enter Message...">
+                        <div class="input-group-prepend">
+                            <button class="input-group-text px-1">
+                                <i class="material-icons">attach_file</i>
+                            </button>
+                        </div>
+                        <div class="input-group-prepend">
+                            <button class="input-group-text px-1">
+                                <i class="material-icons">send</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- setting sidebar ends -->
+        <!-- content page title -->
+        <div class="container-fluid bg-light-opac">
+            <div class="row">
+                <div class="container my-3 main-container">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h2 class="content-color-primary page-title">Chart js charts</h2>
+                            <p class="content-color-secondary page-sub-title">Creative, amazing, awesome and unique</p>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-rounded pink-gradient text-uppercase"><i class="material-icons">add</i> <span class="text-hide-xs">Create</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content page title ends -->
+        <!-- content page -->
+        <div class="container mt-4 main-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="content-color-primary mb-0">Production <small>Chart js Chart </small></h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="mixchartfull"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="content-color-primary mb-0">Live <small>Chart js Chart </small></h5>
+                        </div>
+                        <div class="card-body pt-0">
+                            <canvas id="bubble" class="text-primary"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="content-color-primary mb-0">Radar <small>Chart js Chart </small></h5>
+                        </div>
+                        <div class="card-body">
+                            <br>
+                            <canvas id="radar-area" class="text-primary mb-2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="card mb-1">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="media">
+                                        <figure class="avatar avatar-50 mr-2">
+                                            <img src="img/user1.png" alt="Generic placeholder image">
+                                        </figure>
+                                        <div class="media-body">
+                                            <p class="content-color-secondary mb-0">Welcome</p>
+                                            <h4 class="content-color-primary mb-0">John McMohan</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto text-right">
+                                    <div class="dropdown">
+                                        <button class="btn btn-link btn-sm rounded-0 dropdown-toggle float-right icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" type="button">
+                                            <i class="fa fa-ellipsis-v"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right">
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-exclamation-circle text-secondary"></i> Report</a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-cog text-secondary"></i> Settings</a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="fa fa-trash text-secondary"></i> Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h2 class="font-weight-light">$332541</h2>
+                            <p class="content-color-secondary">Total Budget</p>
+                            <br>
+                            <canvas id="donutchart-area" class="text-primary"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="content-color-primary mb-0">Radar <small class="text-secondary">Last 6 Month </small></h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <h2 class="font-weight-light">$3541</h2>
+                            <p class="content-color-secondary">Total Investment</p>
+                            <br>
+                            <br>
+                            <canvas id="pie-area" class="text-primary"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5 class="content-color-primary mb-0">Polar <small class="text-secondary">Last 6 Month</small></h5>
+                        </div>
+                        <div class="card-body  text-center">
+                            <h2 class="font-weight-light">
+                                <i class="text-success fa fa-angle-up"></i> 23325 h</h2>
+                            <p class="content-color-secondary">Total Invested Effort</p>
+                            <br>
+                            <br>
+                            <canvas id="polar-area" class="text-primary"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="border-top">
+        <div class="row">
+            <div class="col-12 col-sm-6">This template is designed by <b>maxartkiller</b> with <span class="text-danger">❤</span></div>
+            <div class="col-12 col-sm-6 text-right"><a href="" class="content-color-secondary">Privacy Policy</a> | <a href="" class="content-color-secondary">Terms of use</a></div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="static/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script src="static/bootstrap/js/popper.min.js"></script>
+    <script src="http://cdn.bootstrapmb.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Cookie jquery file -->
+    <script src="static/bootstrap/vendor/cookie/jquery.cookie.js"></script>
+    <!-- sparklines chart jquery file -->
+    <script src="static/bootstrap/vendor/sparklines/jquery.sparkline.min.js"></script>
+    <!-- Circular progress gauge jquery file -->
+    <script src="static/bootstrap/vendor/circle-progress/circle-progress.min.js"></script>
+    <!-- Swiper carousel jquery file -->
+    <script src="static/bootstrap/vendor/swiper/js/swiper.min.js"></script>
+    <!-- Chart js jquery file -->
+    <script src="static/bootstrap/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="static/bootstrap/vendor/chartjs/utils.js"></script>
+    <script src="static/bootstrap/vendor/chartjs/chart-js-data.js"></script>
+    <!-- Footable jquery file -->
+    <script src="static/bootstrap/vendor/footable-bootstrap/js/footable.min.js"></script>
+    <!-- datepicker jquery file -->
+    <script src="static/bootstrap/vendor/bootstrap-daterangepicker-master/moment.js"></script>
+    <script src="static/bootstrap/vendor/bootstrap-daterangepicker-master/daterangepicker.js"></script>
+    <!-- jVector map jquery file -->
+    <script src="static/bootstrap/vendor/jquery-jvectormap/jquery-jvectormap.js"></script>
+    <script src="static/bootstrap/vendor/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- circular progress file -->
+    <script src="static/bootstrap/vendor/circle-progress/circle-progress.min.js"></script>
+    <!-- Application main common jquery file -->
+    <script src="static/bootstrap/js/main.js"></script>
+    <!-- page specific script -->
+</body>
+
+</html>

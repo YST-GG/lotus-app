@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" href="/static/img/favicon-apple.png">
+    <link rel="icon" href="/static/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://cdn.bootstrapmb.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="/static/vendor/materializeicon/material-icons.css">
+    <!-- aniamte CSS -->
+    <link rel="stylesheet" href="/static/vendor/animatecss/animate.css">
+    <!-- swiper slider CSS -->
+    <link rel="stylesheet" href="/static/vendor/swiper/css/swiper.min.css">
+    <!-- app CSS -->
+    <link id="theme" rel="stylesheet" href="/static/css/purplesidebar.css" type="text/css">
+    <title>GoTRI - Mobile</title>
+</head>
+
+<body class="fixed-header sidebar-right-close sidebar-left-close">
+    <!-- page loader -->
+    <div class="loader justify-content-center pink-gradient">
+        <div class="align-self-center text-center">
+            <div class="logo-img-loader">
+                <img src="/static/img/loader-hole.png" alt="" class="logo-image">
+                <img src="/static/img/loader-bg.png" alt="" class="logo-bg-image">
+            </div>
+            <h2 class="mt-3 font-weight-light">耘存<br><small>- 手机端 -</small></h2>
+            <p class="mt-2 text-white"></p>
+        </div>
+    </div>
+    <!-- page loader ends  -->
+    <div class="wrapper h-100  h-sm-auto">
+        <!-- main header -->
+        <header class="main-header">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-auto px-0">
+                        <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
+                        <a href="/" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
+                        </a>
+                        <form class="search-header">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col px-0 text-right">
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">mail_outline</i>
+                                <span class="status-number bg-danger text-white">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0" aria-labelledby="dropdownmessage">
+                                <div class="arrow pink-gradient"></div>
+                                <div class="pink-gradient py-3 text-center">
+                                    <h5 class="mb-0">消息</h5>
+                                    <p class="mb-0">最新消息</p>
+                                </div>
+                                <div class="media new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息1</h5>
+                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <a href="">Reply</a>
+                                        <a href="" class="ml-2">View</a>
+                                    </div>
+                                </div>
+                                <a href="#" class="media pink-gradient-active new">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user3.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="my-0">消息2</h5>
+                                        <small class="text-muted d-block mb-2">2:05 am</small>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                                <a href="#" class="media pink-gradient-active">
+                                    <figure class="avatar avatar-40">
+                                        <img src="/static/img/user2.png" alt="Generic placeholder image">
+                                    </figure>
+                                    <div class="media-body">
+                                        <h5 class="mt-0">消息3<small class="text-muted float-right">4:05 am</small></h5>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="dropdown d-inline-block">
+                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <figure class="userpic"><img src="/static/img/user1.png" alt=""></figure>
+                                <h5 class="text-hide-xs">
+                                    <small class="header-color-secondary"></small>
+                                    <span class="header-color-primary"></span>
+                                </h5>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown" aria-labelledby="dropdownMenuLink">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <a href="profile.html">
+                                            <figure class="avatar avatar-120 mx-auto my-3">
+                                                <img src="/static/img/user1.png" alt="">
+                                            </figure>
+                                            <h5 class="card-title mb-2 header-color-primary">John McMohan</h5>
+                                            <h6 class="card-subtitle mb-3 header-color-secondary">South Africa</h6>
+                                        </a>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <button class="btn btn-sm pink-gradient border-0 mb-3">Edit</button>
+                                    </div>
+                                </div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);" id="open-right-sidebar">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Setting
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="header-color-secondary ml-2"><i class="material-icons vm">settings</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            5458 <small class="header-color-secondary font-italic">Points Collected</small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="header-color-secondary material-icons vm">local_play</i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider m-0"></div>
+                                <a class="dropdown-item pink-gradient-active" href="/signall">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            Logout
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main header ends -->
+        <!-- sidebar left -->
+        <div class="sidebar sidebar-left">
+            <div class="container has-background-img">
+                <figure class="background-img pink-gradient">
+                    <img src="/static/img/singer-690117_640.jpg" alt="" class="">
+                </figure>
+                <div class="media w-100 my-3">
+                    <figure class="avatar avatar-40 rounded-circle align-self-start ">
+                        <label class="checkbox-user-check">
+                            <input type="checkbox">
+                            <i class="material-icons">check</i>
+                        </label>
+                        <img src="/static/img/user1.png" alt="Generic placeholder image">
+                    </figure>
+                    <div class="media-body mx-70">
+                        <h5 class="time-title mb-0 text-white">名字/请登录</h5>
+                        <p class="mb-0 text-truncate text-white">邮箱</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/index" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>算力浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/pool" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池浏览器</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/poolIntroduce" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池介绍</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/buyPower" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>购买算力介绍</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">filter_none</i> <span>登录/注册</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/signall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>登录</span></a>
+                            <a href="/registall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>注册</span></a>
+                            <a href="/forgetpassword" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>忘记密码</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_emoticon</i> <span>我的</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="/poweruser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>钱包信息</span></a>
+                            <a href="/pooluser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>提交信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">description</i> <span>联系我们</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a href="form_credit_card.html" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>公司信息</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="backdrop"></div>
+        <!-- sidebar left ends -->
+        <!-- content page -->
+        <div class="container-fluid h-100 h-sm-auto">
+            <div class="row h-100 h-sm-auto">
+                <div class="col-12 col-md-6 h-md-100  h-sm-auto order-2 order-md-1">
+                    <div class="row align-items-center h-100 h-sm-auto">
+                        <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
+                            <h1 class="font-weight-light mb-3 mt-4 content-color-secondary text-left">
+                                <font size="5">我们是</font><span class="font-weight-normal content-color-primary">耘存科技</span>
+                            </h1>
+                            <h4 class="font-weight-light mb-4 content-color-secondary text-left">
+                                <font size="4">欢迎回来,</font><br>请登录您的账户.
+                            </h4>
+                            <div class="card mb-2">
+                                <div class="card-body p-0">
+                                    <label for="inputEmail" class="sr-only">用户名/邮箱</label>
+                                    <input type="email" id="inputEmail" class="form-control form-control-lg border-0" placeholder="用户名/邮箱" required="" autofocus="">
+                                    <hr class="my-0">
+                                    <label for="inputPassword" class="sr-only">密码</label>
+                                    <input type="password" id="inputPassword" class="form-control form-control-lg border-0" placeholder="密码" required="">
+                                </div>
+                            </div>
+                            <small class="form-text text-muted">点击登录按钮，登录到矿工管理页面</small>
+                            <div class="my-4 row">
+                                <div class="col-6 col-md">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                                        <label class="custom-control-label" for="customCheck1">记住我</label>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md text-right">
+                                    <a href="" class="content-color-primary">忘记密码?</a>
+                                </div>
+                            </div>
+                            <div class="text-left mb-4">
+                                <a type="submit" class="btn btn-primary pink-gradient" onclick="checkLogin()">登录</a>
+                                <a href="/" class="float-right btn btn-outline-primary">注册</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 h-md-100 order-1 order-md-2 min-height-300 p-0 bg-dark ">
+                    <div class="carosel swiper-location-carousel h-100 h-sm-auto">
+                        <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="0" data-slides-per-view="1" class="swiper-container swiper-init swiper-signin h-100">
+                            <div class="swiper-pagination">欢迎加入Filecoin</div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide text-center ">
+                                    <div class="background-img">Filecoin是最早的STO项目<img src="/static/img/title2.png" alt="" class="w-auto float-right"></div>
+                                    <div class="row align-items-center h-100 text-white">
+                                        <div class="col-10 col-md-8 col-lg-6 mx-auto my-4">
+                                            <h1 class="font-weight-light mb-4">欢迎加入Filecoin,Filecoin是最早的STO项目</h1>
+                                            <p>我们致力于推广IPFS建立一个完美的IPFS交流合作平台，Filecoin最大的作用就是激励更多的人使用IPFS协议，FIlecoin设置一套激励机制来鼓励大家提供自己的资源。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide text-center">
+                                    <div class="background-img"><img src="/static/img/title1.jpg" alt="" class="w-auto float-right"></div>
+                                    <div class="row align-items-center h-100 text-white">
+                                        <div class="col-10 col-md-8 col-lg-6 mx-auto my-4">
+                                            <h1 class="font-weight-light mb-4">耘存科技携手矿工</h1>
+                                            <p>Filecoin测试网二阶段奖励超过100万FIL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content page ends -->
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="http://cdn.bootstrapmb.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Cookie jquery file -->
+    <script src="/static/vendor/cookie/jquery.cookie.js"></script>
+    <!-- swiper slider jquery file -->
+    <script src="/static/vendor/swiper/js/swiper.min.js"></script>
+    <!-- Application main common jquery file -->
+    <script src="/static/js/main.js"></script>
+    <!-- page specific script -->
+    <script>
+       // 点击登录，检查登录成功与否
+       function checkLogin(){
+            $.ajax({
+                type:"GET",
+                url:"http://47.100.10.123:10080/user/user_regist",
+                data:{name:$("#inputEmail").val(),
+                    password:$("#inputPassword").val()
+                    },
+                success:function(data){
+                console.log(data);
+                    if(data==''){
+                        $("#shiBai").html(data);                    
+                        console.log("222")
+                    }else{
+                        console.log("333")
+                        $("#mssg").html(data);
+                        $("#shiBai").html("");
+                        window.location.href="/";//登录之后跳转到主页
+                }
+                }
+            })
+        }
+
+
+    'use strict';
+    var mySwiper = new Swiper('.swiper-signin', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+
+    $(window).on('resize', function() {
+        var mySwiper = new Swiper('.swiper-signin', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            autoplay: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+    });
+    </script>
+</body>
+
+</html>
