@@ -302,6 +302,7 @@
                                 <h4 class="text-white mb-0">Domestic Sales</h4>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="card-body">
                         <canvas id="piecharts"></canvas>
@@ -417,7 +418,13 @@
             <!-- page specific script -->
             <script src="/static/js/dashboard.js"></script>
             <!-- page specific script -->
-
+            <!--饼图调用-->
+            <script type="text/javascript">
+                $(function(){
+                    //在这就行
+                    qxfl('#qxfl');
+                });
+            </script>
             <!--饼图调用-->
             <script type="text/javascript">
                 $(function(){
