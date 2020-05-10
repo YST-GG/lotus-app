@@ -31,7 +31,7 @@
     <!-- 引入 echarts.js -->
     <script src="/js/echarts.common.min.js"></script>
     <script src="/js/echartsOne.js"></script>
-    
+
 
     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
     <script src="/bower_components/highcharts/highstock.js"></script>
@@ -302,7 +302,6 @@
                                 <h4 class="text-white mb-0">Domestic Sales</h4>
                             </div>
                         </div>
-                        
                     </div>
                     <div class="card-body">
                         <canvas id="piecharts"></canvas>
@@ -358,7 +357,7 @@
                         <p class="content-color-secondary">10个</p>
                         <br>
                         <h3>
-                            <div id="qxfl" data-index="1"></div>
+                            <div id="bingtu" data-index="1"></div>
                         </h3>
                         
                         <div id="main" style="width: 500px;height:500px;"></div>
@@ -422,16 +421,17 @@
             <script type="text/javascript">
                 $(function(){
                     //在这就行
-                    qxfl('#qxfl');
-                });
-            </script>
-            <!--饼图调用-->
-            <script type="text/javascript">
+                    bingtu('#bingtu');
+                }),
                 $(function(){
                     //在这就行
                     qxfl('#qxfl');
                 });
             </script>
+            <!--饼图调用-->
+
+ 
+
             <script>
             // 点击登录，检查登录成功与否
             function checkLogin(){
