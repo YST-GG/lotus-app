@@ -27,6 +27,53 @@
     <!-- app CSS -->
     <link id="theme" rel="stylesheet" href="/static/css/purplesidebar.css" type="text/css">
     <title>耘存科技 - Mobile</title>
+    <style>
+        body {
+            background-color: #f8f8f8;
+        }
+
+        /*第一个分页器*/
+        .pagination-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination a {
+            background-color: #999;
+            color: #fff;
+            padding: 1px 6px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .pagination a:last-child {
+            margin-right: 0;
+        }
+
+        .pagination a.active {
+            background-color: #85D1FF;
+        }
+
+        .page-change {
+            /*margin: 0 15px;*/
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: #f7f7f7;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .skip input {
+            width: 50px;
+        }
+    </style>
 </head>
 
 <body class="fixed-header sidebar-right-close sidebar-left-close">
@@ -49,8 +96,10 @@
             <div class="container-fluid">
                 <div class="row align-items-center">
                     <div class="col-auto px-0">
-                        <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
-                        <a href="index.ejs" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
+                        <button class="btn pink-gradient btn-icon" id="left-menu"><i
+                                class="material-icons">widgets</i></button>
+                        <a href="index.ejs" class="logo"><img src="/static/img/logo-icon.png" alt=""><span
+                                class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
                         </a>
                         <form class="search-header">
                             <div class="input-group">
@@ -62,11 +111,14 @@
                     </div>
                     <div class="col px-0 text-right">
                         <div class="dropdown d-inline-block">
-                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#" role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="btn header-color-secondary btn-icon dropdown-toggle caret-none" href="#"
+                                role="button" id="dropdownmessage" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
                                 <i class="material-icons">mail_outline</i>
                                 <span class="status-number bg-danger text-white">9+</span>
                             </a>
-                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0" aria-labelledby="dropdownmessage">
+                            <div class="dropdown-menu notification-dropdown align-center arrow-top pt-0"
+                                aria-labelledby="dropdownmessage">
                                 <div class="arrow pink-gradient"></div>
                                 <div class="pink-gradient py-3 text-center">
                                     <h5 class="mb-0">消息</h5>
@@ -78,7 +130,8 @@
                                     </figure>
                                     <div class="media-body">
                                         <h5 class="mt-0">消息1</h5>
-                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <p class="mb-2">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                            scelerisque ante sollicitudin.</p>
                                         <a href="">Reply</a>
                                         <a href="" class="ml-2">View</a>
                                     </div>
@@ -90,7 +143,8 @@
                                     <div class="media-body">
                                         <h5 class="my-0">消息2</h5>
                                         <small class="text-muted d-block mb-2">2:05 am</small>
-                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                            sollicitudin.</p>
                                     </div>
                                 </a>
                                 <a href="#" class="media pink-gradient-active">
@@ -99,20 +153,23 @@
                                     </figure>
                                     <div class="media-body">
                                         <h5 class="mt-0">消息3<small class="text-muted float-right">4:05 am</small></h5>
-                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</p>
+                                        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                            sollicitudin.</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="dropdown d-inline-block">
-                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="btn header-color-secondary dropdown-toggle username" href="#" role="button"
+                                id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <figure class="userpic"><img src="/static/img/user1.png" alt=""></figure>
                                 <h5 class="text-hide-xs">
                                     <small class="header-color-secondary"></small>
                                     <span class="header-color-primary"></span>
                                 </h5>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right profile-dropdown" aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown"
+                                aria-labelledby="dropdownMenuLink">
                                 <div class="card">
                                     <div class="card-body text-center">
                                         <a href="profile.html">
@@ -122,17 +179,20 @@
                                             <h5 class="card-title mb-2 header-color-primary">John McMohan</h5>
                                             <h6 class="card-subtitle mb-3 header-color-secondary">South Africa</h6>
                                         </a>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up the bulk of the card's content.</p>
                                         <button class="btn btn-sm pink-gradient border-0 mb-3">Edit</button>
                                     </div>
                                 </div>
-                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);" id="open-right-sidebar">
+                                <a class="dropdown-item pink-gradient-active" href="javascript:void(0);"
+                                    id="open-right-sidebar">
                                     <div class="row align-items-center">
                                         <div class="col">
                                             Setting
                                         </div>
                                         <div class="col-auto">
-                                            <div class="header-color-secondary ml-2"><i class="material-icons vm">settings</i></div>
+                                            <div class="header-color-secondary ml-2"><i
+                                                    class="material-icons vm">settings</i></div>
                                         </div>
                                     </div>
                                 </a>
@@ -140,7 +200,8 @@
                                 <a class="dropdown-item pink-gradient-active" href="javascript:void(0);">
                                     <div class="row align-items-center">
                                         <div class="col">
-                                            5458 <small class="header-color-secondary font-italic">Points Collected</small>
+                                            5458 <small class="header-color-secondary font-italic">Points
+                                                Collected</small>
                                         </div>
                                         <div class="col-auto">
                                             <i class="header-color-secondary material-icons vm">local_play</i>
@@ -154,7 +215,8 @@
                                             Logout
                                         </div>
                                         <div class="col-auto">
-                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i></div>
+                                            <div class="text-danger ml-2"><i class="material-icons vm">exit_to_app</i>
+                                            </div>
                                         </div>
                                     </div>
                                 </a>
@@ -187,49 +249,68 @@
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i
+                            class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i
+                            class="material-icons icon arrow">expand_more</i></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="/" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
+                            <a href="/" class="nav-link pink-gradient-active"><i class="material-icons icon"></i>
+                                <span>区块链浏览器</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>算力浏览器</span></a>
+                            <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i>
+                                <span>算力浏览器</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="/pool" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池浏览器</span></a>
+                            <a href="/pool" class="nav-link pink-gradient-active"><i class="material-icons icon"></i>
+                                <span>矿池浏览器</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="/poolIntroduce" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池介绍</span></a>
+                            <a href="/poolIntroduce" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>矿池介绍</span></a>
                         </li>
                         <li class="nav-item">
-                            <a href="/buyPower" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>购买算力介绍</span></a>
+                            <a href="/buyPower" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>购买算力介绍</span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">filter_none</i> <span>登录/注册</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i
+                            class="material-icons icon">filter_none</i> <span>登录/注册</span><i
+                            class="material-icons icon arrow">expand_more</i></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="/signall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>登录</span></a>
-                            <a href="/registall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>注册</span></a>
-                            <a href="/forgetpassword" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>忘记密码</span></a>
+                            <a href="/signall" class="nav-link pink-gradient-active"><i class="material-icons icon"></i>
+                                <span>登录</span></a>
+                            <a href="/registall" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>注册</span></a>
+                            <a href="/forgetpassword" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>忘记密码</span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_emoticon</i> <span>我的</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i
+                            class="material-icons icon">insert_emoticon</i> <span>我的</span><i
+                            class="material-icons icon arrow">expand_more</i></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="/poweruser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>钱包信息</span></a>
-                            <a href="/pooluser" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>矿池信息</span></a>
+                            <a href="/poweruser" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>钱包信息</span></a>
+                            <a href="/pooluser" class="nav-link pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>矿池信息</span></a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">description</i> <span>联系我们</span><i class="material-icons icon arrow">expand_more</i></a>
+                    <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i
+                            class="material-icons icon">description</i> <span>联系我们</span><i
+                            class="material-icons icon arrow">expand_more</i></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="form_credit_card.ejs" class="nav-link  pink-gradient-active"><i class="material-icons icon"></i> <span>公司信息</span></a>
+                            <a href="form_credit_card.ejs" class="nav-link  pink-gradient-active"><i
+                                    class="material-icons icon"></i> <span>公司信息</span></a>
                         </li>
                     </ul>
                 </li>
@@ -264,7 +345,8 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-success col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-success col-6" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -279,7 +361,8 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-danger col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger col-6" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -294,7 +377,8 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -309,7 +393,8 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -324,7 +409,8 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-warning col-6" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-warning col-6" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -339,12 +425,14 @@
                                 </div>
                             </div>
                             <div class="progress progress-small">
-                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-primary col-4" role="progressbar" aria-valuenow="25"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Tipset 数据 -->
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="card rounded-0 border-0 mb-3">
@@ -356,7 +444,8 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table">
+                            <!-- table-responsive -->
+                            <table class="table-responsive table" style="text-nowrap: nowrap">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
@@ -364,7 +453,8 @@
                                         <th scope="col">Tipset</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tipSet_wrap">
+                                    <!--
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>Mark</td>
@@ -380,37 +470,24 @@
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                     </tr>
+                                 -->
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav>
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- 分页容器 -->
+            <div class="pagination-container">
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change prev" aria-hidden="true">&laquo;</span>
+                </button>
+                <div class="pagination"></div>
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change next" aria-hidden="true">&raquo;</span>
+                </button>
+            </div>
+            <!-- 矿工排名 -->
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="card rounded-0 border-0 mb-3">
@@ -430,7 +507,8 @@
                                         <th scope="col">算力</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="minerSort_wrap">
+                                    <!--
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>Mark</td>
@@ -446,123 +524,130 @@
                                         <td>Larry</td>
                                         <td>the Bird</td>
                                     </tr>
+                                    -->
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav>
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="container mt-4 main-container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="card mb-4 fullscreen">
-                            <div class="card-header">
-                                <div class="media">
-                                    <div class="col-8">
-                                        <h5 class="card-title mb-0">全网矿工数据</h5>
-                                    </div>
+            <!-- 分页容器 -->
+            <div class="pagination-container pagination-container2">
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change prev page-change2 prev2" aria-hidden="true">&laquo;</span>
+                </button>
+                <div class="pagination pagination2"></div>
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change next page-change2 next2" aria-hidden="true">&raquo;</span>
+                </button>
+            </div>
+            <!-- 全网矿工数据 -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card mb-4 fullscreen">
+                        <div class="card-header">
+                            <div class="media">
+                                <div class="col-8">
+                                    <h5 class="card-title mb-0">全网矿工数据</h5>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <table class="table " id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>矿工名字</th>
-                                            <th>在线时间</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="odd">
-                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Strobarry milk
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td </tr> <tr class="odd">
-                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="odd">
-                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                        <tr class="even ">
-                                            <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
-                                            </td>
-                                            <td>infoatmaxartkiller.in</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- /.table-responsive -->
-                            </div>
+                        </div>
+                        <div class="card-body">
+                            <table class="table " id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>矿工名字</th>
+                                        <th>在线时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="allMinerData_wrap">
+                                    <!--
+                                    <tr class="odd">
+                                        <td>
+                                            <img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Strobarry milk
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td>
+                                            <img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td>
+                                            <img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td><img src="/static/img/user3.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Alone Guy
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td><img src="/static/img/user2.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Astha Smith
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">Lucky Sans
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    <tr class="even ">
+                                        <td><img src="/static/img/user1.png" alt="" class="rounded-circle avatar avatar-50 mr-2">John Doe
+                                        </td>
+                                        <td>infoatmaxartkiller.in</td>
+                                    </tr>
+                                    -->
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- 分页容器 -->
+            <div class="pagination-container pagination-container3">
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change prev page-change3 prev3" aria-hidden="true">&laquo;</span>
+                </button>
+                <div class="pagination pagination3"></div>
+                <button style="background-color: #f7f7f7; border: none; outline: none">
+                    <span class="page-change next page-change3 next3" aria-hidden="true">&raquo;</span>
+                </button>
+            </div>
+            <!--
+                <div class="container mt-4 main-container">
+
+                </div>
+            -->
         </div>
         <!-- content page ends -->
     </div>
@@ -581,7 +666,7 @@
     <script type="text/javascript" src="/static/vendor/swiper/js/swiper.min.js"></script>
     <!-- Chart js jquery file -->
     <script type="text/javascript" src="/static/vendor/chartjs/Chart.bundle.min.js"></script>
-    <script type="text/javascript"  src="/static/vendor/chartjs/utils.js"></script>
+    <script type="text/javascript" src="/static/vendor/chartjs/utils.js"></script>
     <!-- Footable jquery file -->
     <script type="text/javascript" src="/static/vendor/footable-bootstrap/js/footable.min.js"></script>
     <!-- datepicker jquery file -->
@@ -600,81 +685,344 @@
     <script type="text/javascript" src="/static/js/dashboard.js"></script>
     <!-- page specific script -->
     <script type="text/javascript">
-    "use script";
-    $(window).on('load', function() {
-        var tour = new Tour({
-            steps: [{
-                element: "#left-menu",
-                title: "Main Menu",
-                content: "Access the demo pages from sidebar",
-                smartPlacement: true,
-                storage: false
-            }, {
-                element: "button[data-target='#createOrder']",
-                title: "Creative Form",
-                content: "See beautifully designed form in modal",
-                smartPlacement: true,
-                placement: "left",
-                storage: false
+        "use script";
+        $(window).on('load', function () {
+            var tour = new Tour({
+                steps: [{
+                    element: "#left-menu",
+                    title: "Main Menu",
+                    content: "Access the demo pages from sidebar",
+                    smartPlacement: true,
+                    storage: false
+                }, {
+                    element: "button[data-target='#createOrder']",
+                    title: "Creative Form",
+                    content: "See beautifully designed form in modal",
+                    smartPlacement: true,
+                    placement: "left",
+                    storage: false
 
-            }, {
-                element: ".close-sidebar",
-                title: "Customizaton Menu",
-                content: "Customize your Layout style",
-                smartPlacement: true,
-                placement: "left",
-                storage: false
+                }, {
+                    element: ".close-sidebar",
+                    title: "Customizaton Menu",
+                    content: "Customize your Layout style",
+                    smartPlacement: true,
+                    placement: "left",
+                    storage: false
 
-            }]
+                }]
+
+            });
+            // Initialize the tour
+            tour.init();
+
+            // Start the tour
+            tour.start();
 
         });
-        // Initialize the tour
-        tour.init();
 
-        // Start the tour
-        tour.start();
 
-    });
-     $(function(){
-     $.ajax({
-              type: "GET",
-              url: "http://47.100.10.123:10080/lotus/lotus_message",
-              data: '',
-              dataType: "json",
-              success: function(json){
-              var i = 0;
-              var temp = 0;
-               for(i;json.networkStorage>1024;i++)
-               {
-                 json.networkStorage = parseInt(json.networkStorage)/1024.00;
-               }
-               temp =  json.networkStorage;
-               switch (i) {
-                 case 0: temp = temp +"B";
-                         break;
-                 case 1: temp = temp + "KB";
-                         break;
-                 case 2: temp = temp + "MB";
-                         break;
-                 case 3: temp = temp + "GB";
-                         break;
-                 case 4: temp = temp + "TB";
-                         break;
-                 case 5: temp = temp + "PB";
-                         break;
-                 case 6: temp = temp + "ZB";
-                         break;
-               }
 
-               $("#height").html(json.blockHeight);
-               $("#averagePrice").html(json.averagePrice);
-               $("#averageBlocktime").html(json.averageBlocktime + "s");
-               $("#pledgeCollateral").html(json.pledgeCollateral);
-               $("#activeNodes").html(json.activeNodes);
-               $("#networkStorage").html(temp);
-              }
-       });
-       });
+        $(function () {
+
+            $.ajax({
+                type: "GET",
+                url: "http://47.100.10.123:10080/lotus/lotus_message",
+                data: '',
+                dataType: "json",
+                success: function (json) {
+                    var i = 0;
+                    var temp = 0;
+                    for (i; json.networkStorage > 1024; i++) {
+                        json.networkStorage = parseInt(json.networkStorage) / 1024.00;
+                    }
+                    temp = json.networkStorage;
+                    switch (i) {
+                        case 0: temp = temp + "B";
+                            break;
+                        case 1: temp = temp + "KB";
+                            break;
+                        case 2: temp = temp + "MB";
+                            break;
+                        case 3: temp = temp + "GB";
+                            break;
+                        case 4: temp = temp + "TB";
+                            break;
+                        case 5: temp = temp + "PB";
+                            break;
+                        case 6: temp = temp + "ZB";
+                            break;
+                    }
+
+                    $("#height").html(json.blockHeight);
+                    $("#averagePrice").html(json.averagePrice);
+                    $("#averageBlocktime").html(json.averageBlocktime + "s");
+                    $("#pledgeCollateral").html(json.pledgeCollateral);
+                    $("#activeNodes").html(json.activeNodes);
+                    $("#networkStorage").html(temp);
+                }
+            });
+
+            // 发送请求, 获取Tipset数据
+            $.ajax({
+                type: "GET",
+                url: "http://47.100.10.123:10080/lotus/chain_data",
+                data: '',
+                dataType: "json",
+                success: function (result) {
+                    // console.log("---------------", result);
+                    let newMain = document.querySelector('#tipSet_wrap');//数据容器
+                    let pagination = document.querySelector('.pagination');//分页容器
+                    let pageCount = Math.ceil(result.length / 10); //根据数据的长度计算总共几页
+                    let newsDataRender = [];//每页要显示的数据
+                    let p = 1;//根据p值显示每页的数据
+
+                    //渲染页面函数
+                    let render = () => {
+                        newMain.innerHTML = ' ';
+                        newsDataRender = result.slice((p - 1) * 10, 10 * p); //每页要显示的数据,一页显示5条
+                        newsDataRender.forEach((item, index) => {
+                            newMain.innerHTML += `
+                            <tr>
+                                <th style="vertical-align: middle" scope="row">${item.id}</th>
+                                <td>${item.height}</td>
+                                <td>${item.tipset}</td>
+                            </tr>`;
+                        });
+                    };
+                    //初始化页面
+                    render();
+
+                    //渲染分页
+                    for (let i = 1; i <= pageCount; i++) {
+                        pagination.innerHTML += `<a>${i}</a>`;
+                    }
+                    // pagination.innerHTML +=`<span class="skip">跳转至 <input type="text"> </span>页`;//获取页数
+                    let asAll = pagination.querySelectorAll('a');
+                    //页面刚进来时第一页高亮
+                    asAll[p - 1].classList.add('active');
+
+                    //遍历总页数
+                    asAll.forEach((item, index) => {
+                        //点击页数
+                        item.onclick = function () {
+                            for (let j = 0; j < asAll.length; j++) {
+                                asAll[j].classList.remove('active');
+                            }
+                            this.classList.add('active');
+                            p = index + 1; //点击页数，改变p的值，以改变这个页面要显示的数据，达到分页的效果
+                            render(); //重新渲染页面
+                        }
+                    });
+
+                    //点击上一页下一页，改变高亮
+                    let changePageClass = () => {
+                        for (let j = 0; j < asAll.length; j++) {
+                            asAll[j].classList.remove('active');
+                        }
+                        asAll[p - 1].classList.add('active');
+                    };
+                    //上一页
+                    let prev = document.querySelector('.prev');
+                    prev.onclick = function (e) {
+                        if (p <= 1) {
+                            console.log(p);
+                            return;
+                        } else {
+                            p = p - 1;
+                            changePageClass();
+                            render();
+                        }
+                    };
+                    //下一页
+                    let next = document.querySelector('.next');
+                    next.onclick = function () {
+                        if (p >= asAll.length) {
+                            return;
+                        }
+                        p = p + 1;
+                        changePageClass();
+                        render();
+                    }
+                },
+                error: function () {
+                    alert("网络错误, 稍后再试 !")
+                }
+            });
+
+            // 发送请求, 获取矿工排名数据
+            $.ajax({
+                type: "GET",
+                url: "http://47.100.10.123:10080/lotus/miner_data",
+                data: '',
+                dataType: "json",
+                success: function (result) {
+                    // console.log("---------------", result);
+                    let newMain = document.querySelector('#minerSort_wrap');//数据容器
+                    let pagination = document.querySelector('.pagination2');//分页容器
+                    let pageCount = Math.ceil(result.length / 5); //根据数据的长度计算总共几页
+                    let newsDataRender = [];//每页要显示的数据
+                    let p = 1;//根据p值显示每页的数据
+
+                    //渲染页面函数
+                    let render = () => {
+                        newMain.innerHTML = ' ';
+                        newsDataRender = result.slice((p - 1) * 5, 5 * p); //每页要显示的数据,一页显示5条
+                        newsDataRender.forEach((item, index) => {
+                            newMain.innerHTML += `
+                            <tr>
+                                <th scope="row">${item.id}</th>
+                                <td>${item.minerName}</td>
+                                <td>${item.power}</td>
+                            </tr>`;
+                        });
+                    };
+                    //初始化页面
+                    render();
+
+                    //渲染分页
+                    for (let i = 1; i <= pageCount; i++) {
+                        pagination.innerHTML += `<a>${i}</a>`;
+                    }
+                    // pagination.innerHTML +=`<span class="skip2">跳转至 <input type="text"> </span>页`;//获取页数
+                    let asAll = pagination.querySelectorAll('a');
+                    //页面刚进来时第一页高亮
+                    asAll[p - 1].classList.add('active');
+
+                    //遍历总页数
+                    asAll.forEach((item, index) => {
+                        //点击页数
+                        item.onclick = function () {
+                            for (let j = 0; j < asAll.length; j++) {
+                                asAll[j].classList.remove('active');
+                            }
+                            this.classList.add('active');
+                            p = index + 1; //点击页数，改变p的值，以改变这个页面要显示的数据，达到分页的效果
+                            render(); //重新渲染页面
+                        }
+                    });
+
+                    //点击上一页下一页，改变高亮
+                    let changePageClass = () => {
+                        for (let j = 0; j < asAll.length; j++) {
+                            asAll[j].classList.remove('active');
+                        }
+                        asAll[p - 1].classList.add('active');
+                    };
+                    //上一页
+                    let prev = document.querySelector('.prev2');
+                    prev.onclick = function (e) {
+                        if (p <= 1) {
+                            console.log(p);
+                            return;
+                        } else {
+                            p = p - 1;
+                            changePageClass();
+                            render();
+                        }
+                    };
+                    //下一页
+                    let next = document.querySelector('.next2');
+                    next.onclick = function () {
+                        if (p >= asAll.length) {
+                            return;
+                        }
+                        p = p + 1;
+                        changePageClass();
+                        render();
+                    }
+                },
+                error: function () {
+                    alert("网络错误, 稍后再试 !")
+                }
+            });
+
+            // 发送请求, 获取全网矿工数据
+            $.ajax({
+                type: "GET",
+                url: "http://47.100.10.123:10080/block_new/getminer_data",
+                data: '',
+                dataType: "json",
+                success: function (result) {
+                    // console.log("---------------", result);
+                    let newMain = document.querySelector('#allMinerData_wrap');//数据容器
+                    let pagination = document.querySelector('.pagination3');//分页容器
+                    let pageCount = Math.ceil(result.length / 10); //根据数据的长度计算总共几页
+                    let newsDataRender = [];//每页要显示的数据
+                    let p = 1;//根据p值显示每页的数据
+
+                    // 渲染页面函数
+                    let render = () => {
+                        newMain.innerHTML = ' ';
+                        newsDataRender = result.slice((p - 1) * 10, 10 * p); //每页要显示的数据,一页显示5条
+                        newsDataRender.forEach((item, index) => {
+                            newMain.innerHTML += `
+                            <tr>
+                                <td>${item.name}</td>
+                                <td>${item.days}</td>
+                            </tr>`;
+                        });
+                    };
+                    //初始化页面
+                    render();
+
+                    //渲染分页
+                    for (let i = 1; i <= pageCount; i++) {
+                        pagination.innerHTML += `<a>${i}</a>`;
+                    }
+                    // pagination.innerHTML +=`<span class="skip3">跳转至 <input type="text"> </span>页`;//获取页数
+                    let asAll = pagination.querySelectorAll('a');
+                    //页面刚进来时第一页高亮
+                    asAll[p - 1].classList.add('active');
+
+                    //遍历总页数
+                    asAll.forEach((item, index) => {
+                        //点击页数
+                        item.onclick = function () {
+                            for (let j = 0; j < asAll.length; j++) {
+                                asAll[j].classList.remove('active');
+                            }
+                            this.classList.add('active');
+                            p = index + 1; //点击页数，改变p的值，以改变这个页面要显示的数据，达到分页的效果
+                            render(); //重新渲染页面
+                        }
+                    });
+
+                    //点击上一页下一页，改变高亮
+                    let changePageClass = () => {
+                        for (let j = 0; j < asAll.length; j++) {
+                            asAll[j].classList.remove('active');
+                        }
+                        asAll[p - 1].classList.add('active');
+                    };
+                    //上一页
+                    let prev = document.querySelector('.prev3');
+                    prev.onclick = function (e) {
+                        if (p <= 1) {
+                            console.log(p);
+                            return;
+                        } else {
+                            p = p - 1;
+                            changePageClass();
+                            render();
+                        }
+                    };
+                    //下一页
+                    let next = document.querySelector('.next3');
+                    next.onclick = function () {
+                        if (p >= asAll.length) {
+                            return;
+                        }
+                        p = p + 1;
+                        changePageClass();
+                        render();
+                    }
+                },
+                error: function () {
+                    alert("网络错误, 稍后再试 !")
+                }
+            });
+        });
 
 
     </script>
