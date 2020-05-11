@@ -98,7 +98,7 @@
                     <div class="col-auto px-0">
                         <button class="btn pink-gradient btn-icon" id="left-menu"><i
                                 class="material-icons">widgets</i></button>
-                        <a href="index.ejs" class="logo"><img src="/static/img/logo-icon.png" alt=""><span
+                        <a href="/" class="logo"><img src="/static/img/logo-icon.png" alt=""><span
                                 class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
                         </a>
                         <form class="search-header">
@@ -724,7 +724,7 @@
 
 
         $(function () {
-
+            setInterval(() => {
             $.ajax({
                 type: "GET",
                 url: "http://47.100.10.123:10080/lotus/lotus_message",
@@ -737,6 +737,7 @@
                         json.networkStorage = parseInt(json.networkStorage) / 1024.00;
                     }
                     temp = json.networkStorage;
+                    
                     switch (i) {
                         case 0: temp = temp + "B";
                             break;
@@ -1021,8 +1022,11 @@
                 error: function () {
                     alert("网络错误, 稍后再试 !")
                 }
+                
             });
+        }, 1000)
         });
+        
 
 
     </script>

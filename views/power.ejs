@@ -32,7 +32,6 @@
     <script src="/js/echarts.common.min.js"></script>
     <script src="/js/echartsOne.js"></script>
 
-
     <link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
     <script src="/bower_components/highcharts/highstock.js"></script>
     <script src="/bower_components/highcharts/modules/exporting.js"></script>
@@ -63,7 +62,7 @@
                 <div class="row align-items-center">
                     <div class="col-auto px-0">
                         <button class="btn pink-gradient btn-icon" id="left-menu"><i class="material-icons">widgets</i></button>
-                        <a href="index.ejs" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
+                        <a href="/" class="logo"><img src="/static/img/logo-icon.png" alt=""><span class="text-hide-xs"><b>耘存</b>科技<br><span class="small">- 手机端 -</span></span>
                         </a>
                         <form class="search-header">
                             <div class="input-group">
@@ -203,7 +202,7 @@
                     <a href="javascript:void(0);" class="nav-link dropdwown-toggle"><i class="material-icons icon">insert_chart_outlined</i> <span>Lotus Dashboard</span><i class="material-icons icon arrow">expand_more</i></a>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a href="/index" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
+                            <a href="/" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>区块链浏览器</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="/power" class="nav-link pink-gradient-active"><i class="material-icons icon"></i> <span>算力浏览器</span></a>
@@ -299,9 +298,16 @@
                     <div class="card-header">
                         <div class="media">
                             <div class="media-body">
-                                <h4 class="text-white mb-0">Domestic Sales</h4>
+                               
+                                <h4 class="text-white mb-0">全网总算力</h4>
+                                <div id="powerNetwork"></div>
                             </div>
                         </div>
+                        <h3>
+                            <div id="bingtu_1" data-aaa="2"></div>
+                        </h3>
+                         <!--第一个饼图-->
+                        <div id="bingtu" style="width: 500px;height:500px;"></div>
                     </div>
                     <div class="card-body">
                         <canvas id="piecharts"></canvas>
@@ -357,7 +363,7 @@
                         <p class="content-color-secondary">10个</p>
                         <br>
                         <h3>
-                            <div id="bingtu" data-index="1"></div>
+                            <div id="qxfl" data-index="1"></div>
                         </h3>
                         
                         <div id="main" style="width: 500px;height:500px;"></div>
@@ -421,7 +427,7 @@
             <script type="text/javascript">
                 $(function(){
                     //在这就行
-                    bingtu('#bingtu');
+                    bingtu('#bingtu_1');
                 }),
                 $(function(){
                     //在这就行
@@ -430,9 +436,42 @@
             </script>
             <!--饼图调用-->
 
- 
 
             <script>
+            //全网总算力
+            $.ajax({
+                type: "GET",
+                url: "http://47.100.10.123:10080/lotus/lotus_message",
+                data: '',
+                dataType: "json",
+                success: function (json) {
+                    var i = 0;
+                    var temp = 0;
+                    for (i; json.networkStorage > 1024; i++) {
+                        json.networkStorage = json.networkStorage / 1024.00;
+                    }
+                    temp = json.networkStorage;
+                    switch (i) {
+                        case 0: temp = temp + "B";
+                            break;
+                        case 1: temp = temp + "KB";
+                            break;
+                        case 2: temp = temp + "MB";
+                            break;
+                        case 3: temp = temp + "GB";
+                            break;
+                        case 4: temp = temp + "TB";
+                            break;
+                        case 5: temp = temp + "PB";
+                            break;
+                        case 6: temp = temp + "ZB";
+                            break;
+                    }
+
+                    $("#powerNetwork").html(temp);
+                }
+            });    
+
             // 点击登录，检查登录成功与否
             function checkLogin(){
                 $.ajax({

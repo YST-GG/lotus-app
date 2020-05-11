@@ -31,4 +31,12 @@ exports.pooluser = function (req, res) {
 exports.poweruser = function (req, res) {
     res.render("poweruser", { title: '算力用户详情' })
 };
+exports.poolIntroduce = function (req, res) {
+    res.render("poolIntroduce", { title: '矿池介绍' })
+};
+exports.buyPower = function (req, res) {
+    res.render("buyPower", { title: '购买算力介绍' })
+};
+
+
 

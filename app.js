@@ -8,8 +8,8 @@ app.use(express.static('static/bootstrap'))
 app.use('/static', express.static(path.join('static', 'bootstrap')))
 app.set("view cache", true);
 
-/*app.use(bodyParser.json());//处理以json格式的提交
-app.use(bodyParser.urlencoded({//处理以form表单的提交
+/*app.use(bodyParser.json());//锟斤拷锟斤拷锟斤拷json锟斤拷式锟斤拷锟结交
+app.use(bodyParser.urlencoded({//锟斤拷锟斤拷锟斤拷form锟斤拷锟斤拷锟斤拷锟结交
 	extended: true
 }))*/
 
@@ -28,6 +28,9 @@ app.get("/powerregist", routes.powerregist);
 app.get("/powersign", routes.powersign);
 app.get("/poweruser", routes.poweruser);
 app.get("/registall", routes.registall);
+//鏈畬鎴愮殑椤甸潰/poolIntroduce  /pool /buyPower
+app.get("/poolIntroduce",routes.poolIntroduce);
+app.get("/buyPower",routes.buyPower);
 
 
 
