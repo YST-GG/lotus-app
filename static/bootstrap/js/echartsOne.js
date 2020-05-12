@@ -84,9 +84,6 @@ function bingtu(that){
         success: function (json) {
             var i = 0;
             var temp = 0;
-            for (i; json.networkStorage > 1024; i++) {
-                json.networkStorage = parseInt(json.networkStorage) / 1024.00;
-            }
             temp = json.networkStorage;
 
             //console.log("temp", temp); 
@@ -169,7 +166,6 @@ function qxfl(that){
     
         names = [];
     var index = $(that).data('index');
-    setInterval(() => {
     $.ajax({
         type: 'get',
         url: 'http://47.100.10.123:10080/user/get_allmachine_on',//请求数据的地址
@@ -260,7 +256,6 @@ function qxfl(that){
                 alert("图表请求数据失败!");
             }
     });
-    }, 1000)
 }
 //	//供方责任退货数据
 //	function gfzrth(){
