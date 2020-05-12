@@ -19,6 +19,32 @@
     <!-- app CSS -->
     <link id="theme" rel="stylesheet" href="/static/css/purplesidebar.css" type="text/css">
     <title>GoTRI - Mobile</title>
+    <style>
+        .btn1{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+            font-size: 18px;
+            line-height: 45px;
+            vertical-align: center;
+            color: seashell;
+            border-radius: 3px;
+            
+        }
+        .btn1:hover{
+            background-color::#F5F5F5;
+            font-size: 0;
+        }
+        .btn1 input{
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body class="fixed-header sidebar-right-close sidebar-left-close">
@@ -247,8 +273,20 @@
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto text-center">
                     <h1 class="font-weight-light mb-3 text-white text-center">我们是<span class="font-weight-normal">耘存科技</span></h1>
                     <h4 class="font-weight-light mb-4 text-white text-center">欢迎注册耘存科技算力系统</h4>
+                    <!--选择头像-->
+                    <label type="button" class="btn1">
+                                
+                        <img id="imgLower" class="image-lower" style="width: 130px; height: 130px; border-radius: 50%;">
+                        <ul id="fileList">
+                    
+                        </ul>
+                        <span>点击添加头像</span>
+                        <input type="file" id="file" accept="image/gif,image/jpeg,image/jpg,image/png"/>
+                        
+                    </label>
                     <div class="card mb-4">
                         <div class="card-body p-0">
+                            
                             <!--用户名-->
                             <label for="name" class="sr-only">用户名</label>
                             <input type="email" id="name" class="form-control text-center form-control-lg border-0" placeholder="用户名" required="" autofocus=""/>
@@ -274,22 +312,22 @@
                             <label for="inputPassword2" class="sr-only">再次输入密码</label>
                             <input type="password" id="inputPassword2" class="form-control text-center form-control-lg border-0" placeholder="再次输入密码" required="">
                             <hr class="my-0">
+
                             <!--输入验证码-->
-                            <input type="text" id="code_input" value="" placeholder="请输入验证码" class="form-control text-center form-control-lg border-0"/>
+                            <input type="text" id="code_input" placeholder="请输入验证码" class="form-control text-center form-control-lg border-0"/>
                             <div id="v_container" style="width: 200px;height: 50px; margin: 0 auto;"></div>
                         </div>
                     </div>
                     <div class="my-4 row">
                         <div class="col-12  text-center">
                             <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck111" checked>
+                                <input type="checkbox" class="custom-control-input" id="customCheck111" name="isNumeric" checked>
                                 <label class="custom-control-label text-white" for="customCheck111">接受 <a href="">我们的权力和条款</a>.</label>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
-                        <button id="my_button"class=" btn btn-primary pink-gradient">验证</button>
-                        <a class=" btn btn-primary pink-gradient" onclick="mr_verify()" value="注册">注册</a>
+                        <a class=" btn btn-primary pink-gradient"  onclick="mr_verify()" value="注册" id="my_button">注册</a>
                     </div>
                     <br>
                 </div>
@@ -311,17 +349,89 @@
     <!-- page specific script -->
     <!--图形验证码-->
     <script src="js/gVerify.js"></script>
-    <script>
-        var verifyCode = new GVerify("v_container");
-        document.getElementById("my_button").onclick = function(){
-            var res = verifyCode.validate(document.getElementById("code_input").value);
-            if(res){
-                alert("aaa")
-                
-            }else{
-                alert("验证码错误");
+    <script type="text/javascript">
+        var fileDom = document.getElementById("file");
+        console.log("fileDom",fileDom)
+        var MAX_SIZE = 500;
+        var files = [];
+        fileDom.addEventListener("change", function () {
+            var fileImg = this.files;
+            console.log(fileImg);
+            for (var i = 0; i < fileImg.length; i++) {
+            var file = fileImg[i];
+            if (!/image\/\w+/.test(file.type)) {
+                alert("请选择图片")
+                return false;
             }
+            var reader = new FileReader();
+            //这里利用了闭包的特性，来保留文件名
+            (function (x) {
+                reader.onload = function (e) {
+                    var liNode = document.createElement("li");
+                    liNode.innerText = x;
+                    //document.getElementById("fileList").appendChild(liNode);
+                    //调用压缩文件的方法，具体实现逻辑见下面
+                    render(this.result, x);
+                }
+            })(file.name);
+            //告诉文件读取工具类读取那个文件
+            reader.readAsDataURL(file);
+            }
+        }, false);
+
+        function render(src, name) {
+        //创建Image对象
+        var image = new Image();
+ 
+        image.onload = function () {
+            console.log(image.width,image.height);
+            //通过固定的宽高比压缩
+            //宽大于高的情况
+            if (image.width > MAX_SIZE && image.width >= image.height) {
+                image.height *= MAX_SIZE / image.width;
+                image.width = MAX_SIZE;
+            }
+            //宽小于高的情况
+            if (image.height > MAX_SIZE && image.height > image.width) {
+                image.width *= MAX_SIZE / image.height;
+                image.height = MAX_SIZE;
+            }
+            var canvas = document.createElement("canvas");
+            //获取2d画布
+            var ctx = canvas.getContext("2d");
+            canvas.width = image.width;
+            canvas.height = image.height;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+ 
+            //绘制图片
+            ctx.drawImage(image, 0, 0, image.width, image.height);
+            //生成base64码
+            var blob = canvas.toDataURL("image/png");
+            console.log("blob",blob)
+            files.push(blob);
+            document.getElementById("imgLower").src = blob;
+        };
+        image.src = src;
+    }
+ 
+    //监听上传按钮
+    document.getElementById("my_button").addEventListener("click", function () {
+        ajax();
+    }, false);
+
+    var ajax = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://47.100.10.123:10080/user/user_regist", true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        //此处为了简便， 只考虑一个文件，多个文件类似
+        var data = "data=" + files[0];
+        //将+号转码，防止传输过程中丢失
+        xhr.send(data.replace(/\+/g, '%2B'));
+        xhr.onload = function () {
+            console.log("xhr.onload",xhr.onload);
+            console.log("xhr.responseText",xhr.responseText);
         }
+    }
     </script>
 
     <script> 
@@ -378,15 +488,19 @@
       document.getElementById('pwd_Weak').className=Wcolor;
       document.getElementById('pwd_Medium').className=Mcolor;
       document.getElementById('pwd_Strong').className=Scolor;
+
     }
+    var verifyCode = new GVerify("v_container");
     function mr_verify(){
- 
         //获取表单对象
         var name=document.getElementById("name")
         var mail=document.getElementById("inputEmail");
         var password=document.getElementById("inputPassword");
         var passwordRepeat=document.getElementById("inputPassword2");
         var tel=document.getElementById("tel");
+        var button=document.getElementById("code_input");
+        var chackbox=document.getElementById("customCheck111");
+        var img=document.getElementById("file");
 
         //验证项目是否为空
         if(name.value==='' || name.value===null){
@@ -394,10 +508,12 @@
                 //document.getElementById("name").setAttribute("placeholder","新文本内容");
             return;
         }
+        //验证邮箱是否为空
         if(mail.value==='' || mail.value===null){
             alert("邮箱不能为空！");
             return;
         }
+        //验证密码是否为空
         if(password.value==='' || password.value===null){
             alert("密码不能为空！");
             return;
@@ -406,16 +522,10 @@
             alert("确认密码不能为空！");
             return;
         }
-        // if(tel.value==='' || tel.value===null){
-        //     alert("手机号码不能为空！");
-        //     return;
-        // }
-
         if(password.value!==passwordRepeat.value ){
             alert("密码设置前后不一致！");
             return;
         }
-        
         //验证邮件格式
         apos = mail.value.indexOf("@")
         dotpos = mail.value.lastIndexOf(".")
@@ -423,7 +533,38 @@
             alert("邮箱格式错误！");
             return
         }
-        
+        //验证头像是否为空
+        if(img.value==='' || img.value ===null){
+            alert("请插入一张图片作为头像")
+            return;
+        }
+        //判断验证码是否为空
+        if(button.value ==='' || button.value===null){
+            alert("验证码不能为空");
+            
+            document.getElementById("my_button").onclick = function(){
+                var res = verifyCode.validate(document.getElementById("code_input").value);
+                if(res){
+                    alert("验证码正确")
+                    
+                }else{
+                    alert("验证码错误");
+                }
+            }
+            return;
+        }
+        //判断是否有勾选条约复选框
+        if ($("#customCheck111").is(":checked")==false){
+            alert("请勾选 接受我们的权力和条款");
+            return;
+        }
+
+
+        //验证手机号是否为空
+        // if(tel.value==='' || tel.value===null){
+        //     alert("手机号码不能为空！");
+        //     return;
+        // }
         // //验证手机号格式
         // if(isNaN(tel.value)){
         //     alert("手机号请输入数字！");
@@ -441,21 +582,23 @@
             data:{
                 mail:$("#inputEmail").val(),
                 name:$("#name").val(),
-                password:$("#inputPassword").val() 
+                password:$("#inputPassword").val(),
+                photo:$("file").val()
                 },
             success:function(data){
-               console.log(data);
-                if(data==1){
+                console.log(data);
+                if(data.msg==""){
                     $("#xs").text("该用户名已经存在!");                 
                     console.log("222")
                 }else{
                     console.log("333")
                     $("#msg").html(data);
                     $("#shiBai").html("");
-                    window.location.href="/";//注册之后跳转到登录
+                    //window.location.href="/";//注册之后跳转到登录
               }
             }
         })
+        //alert('注册成功！');
     }
 
     

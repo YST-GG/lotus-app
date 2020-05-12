@@ -316,20 +316,23 @@
        function checkLogin(){
             $.ajax({
                 type:"GET",
-                url:"http://47.100.10.123:10080/user/user_regist",
+                dataType:'json',
+                url:"http://47.100.10.123:10080/user/user_login",
                 data:{name:$("#inputEmail").val(),
-                    password:$("#inputPassword").val()
+                      password:$("#inputPassword").val()
                     },
                 success:function(data){
-                console.log(data);
-                    if(data==''){
+                    console.log(data);
+                    if(data.msg=="传入数据类型有误"){
+                        console.log(data)
                         $("#shiBai").html(data);                    
                         console.log("222")
-                    }else{
-                        console.log("333")
+                    }else if(data.msg=="用户不存在"){
+                        
+                        
                         $("#mssg").html(data);
                         $("#shiBai").html("");
-                        window.location.href="/";//登录之后跳转到主页
+                        //window.location.href="/";//登录之后跳转到主页
                 }
                 }
             })

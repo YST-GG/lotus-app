@@ -52,7 +52,6 @@ function bingtu(that){
     let usedStorage = 0;
     var aaa = $(that).data('aaa');
     console.log("aaa",aaa)
-    setInterval(() => {
     $.ajax({
         type: 'get',
         url: 'http://47.100.10.123:10080/local/get_local_machine',//请求数据的地址
@@ -116,7 +115,6 @@ function bingtu(that){
                 alert("图表请求数据失败!");
             }
     });
-    }, 1000)
 }
 
 
