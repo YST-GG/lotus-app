@@ -85,9 +85,7 @@ function bingtu(that){
             var i = 0;
             var temp = 0;
             temp = json.networkStorage;
-
-            //console.log("temp", temp); 
-            
+            //console.log("temp", temp);  
             names.push(
                 {
                     name:'全网算力'
