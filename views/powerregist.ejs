@@ -286,14 +286,17 @@
                     <div class="card mb-4">
                         <div class="card-body p-0">
                             
+                            <span id="image"></span>
                             <!--用户名-->
                             <label for="name" class="sr-only">用户名</label>
-                            <input type="email" id="name" class="form-control text-center form-control-lg border-0" placeholder="用户名" required="" autofocus=""/>
+                            <input type="name" maxlength="15" onkeyup="CheckName(this.value)" id="name" class="form-control text-center form-control-lg border-0" placeholder="用户名" required="" autofocus=""/>
+                            <span id="ts"></span>
                             <div id="xs" style="color:red"></div>
                             <hr class="my-0">
                             <!--邮箱-->
                             <label for="inputEmail" class="sr-only">邮箱</label>
-                            <input type="email" id="inputEmail" class="form-control text-center form-control-lg border-0" placeholder="邮箱" required="">
+                            <input type="email" onkeyup="CheckEmeil(this.value)" id="inputEmail" class="form-control text-center form-control-lg border-0" placeholder="邮箱" required="">
+                            <span id="mail"></span>
                             <hr class="my-0">
                             <!--输入密码-->
                             <label for="inputPassword" class="sr-only">输入密码</label>
@@ -304,14 +307,16 @@
                                    <td id="pwd_Strong" class="pwd pwd_c pwd_c_r"> </td>
                                 </tr>
                              </table>
-                             <span id="err_msgPsw"></span>
-                            <input type="password" onkeyup="CheckQiang(this.value)" id="inputPassword" class="form-control text-center form-control-lg border-0" placeholder="输入密码(请输入6~16位字符)" required="">
+                             
+                            <input type="password" maxlength="16" onkeyup="CheckQiang(this.value)" id="inputPassword" class="form-control text-center form-control-lg border-0" placeholder="输入密码(请输入6~16位字符)" required="">
                             <hr class="my-0">
+                            <span id="err_msgPsw"></span>
+                            <span id="password"></span>
                             <!--再次输入密码-->
                             <label for="inputPassword2" class="sr-only">再次输入密码</label>
-                            <input type="password" id="inputPassword2" class="form-control text-center form-control-lg border-0" placeholder="再次输入密码" required="">
+                            <input type="password" maxlength="16" id="inputPassword2" class="form-control text-center form-control-lg border-0" placeholder="再次输入密码" required="">
                             <hr class="my-0">
-
+                            <span id="password_2"></span>
                             <!--输入验证码-->
                             <input type="text" id="code_input" placeholder="请输入验证码" class="form-control text-center form-control-lg border-0"/>
                             <div id="v_container" style="width: 200px;height: 50px; margin: 0 auto;"></div>
@@ -326,7 +331,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                        <a class=" btn btn-primary pink-gradient"  onclick="mr_verify()" value="注册" id="my_button">注册</a>
+                        <a class=" btn btn-primary pink-gradient" onclick="mr_verify()" value="注册" id="my_button" style="width: 100%;">注册</a>
                     </div>
                     <br>
                 </div>
@@ -350,7 +355,65 @@
     <script src="js/gVerify.js"></script>
 
     <script> 
+    //输入用户名时判断
+    function CheckName(){
+        var name_input=$('#name').val()
+        //console.log("name_input",name_input)
+        var name_data="";
+        //用ajax去数据库匹配，
+        $.ajax({
+            url:"http://47.100.10.123:10080/user/get_power_user", //要处理的页面
+            data:'', //要传过去的数据
+            type:"GET",  //提交方式
+            dataType:"json", //返回的数据类型，TEXT字符串 JSON返回JSON XML返回XML；dataType中T要大写！！
+            success: function(json){  //回调函数，data为形参，是从login-cl.php页面返回的值
+                var i=0;
+                for(i;json.data.length>=i ;i++){
+                    //console.log("name_data",name_data)
+                    name_data=json.data[i].name
+                    if(name_input === name_data){
+                        $("#ts").html("*该用户名已注册*");
+                        $("#ts").css("color","red");
+                        return;
+                    }else if(name_input===null|| name_input===''){
+                        $("#ts").html("*用户名不能为空*");
+                        $("#ts").css("color","red");
+                        return;
+                    }else if(name_input.length < 7){
+                        $("#ts").html("*用户名长度不能小于6*");
+                        $("#ts").css("color","red");
+                        return;
+                    }else{
+                        $("#ts").html("*该用户名可用*");  
+                        $("#ts").css("color","green");
+                        return;
+                    }
+                    
+                }
+            }
+        });    
+    }
+    //输入密码时判断
     function CheckQiang(pwd){
+        var pass_input=$('#inputPassword').val()
+        var password=document.getElementById("inputPassword");
+        if(password.value==='' || password.value===null){
+            $("#err_msgPsw").html("*密码不能为空*");
+            $("#err_msgPsw").css("color","red");
+            return;
+        }else if(pass_input.length<6){
+            $("#err_msgPsw").html("*密码不能小于6*");
+            $("#err_msgPsw").css("color","red");
+            return;
+        }else if(pass_input.length>16){
+            $("#err_msgPsw").html("*密码不能大于16*");
+            $("#err_msgPsw").css("color","red");
+            return;
+        }else if(password.value!=='' || password.value!==null){
+            $("#err_msgPsw").html("");
+        }
+
+
         var Mcolor,Wcolor,Scolor;
         var m=0;
         var Modes=0;
@@ -405,13 +468,35 @@
         document.getElementById('pwd_Strong').className=Scolor;
 
     }
-        var verifyCode = new GVerify("v_container");
+    //输入邮箱时判断
+    function CheckEmeil(){
+        var mail=document.getElementById("inputEmail");
+        //验证邮箱是否为空
+        apos = mail.value.indexOf("@")
+        dotpos = mail.value.lastIndexOf(".")
+        if(mail.value==='' || mail.value===null){
+            $("#mail").html("*邮箱不能为空*");
+            $("#mail").css("color","red");
+        }else if(apos < 1 || dotpos - apos < 3){
+            //验证邮件格式
+            $("#mail").html("*邮箱格式错误*");
+            $("#mail").css("color","red");
+            return;
+        }else{
+            //验证邮件格式
+            $("#mail").html("*邮箱格式正确*");
+            $("#mail").css("color","green");
+        }
+    }
+
+    //创建图片验证码
+    var verifyCode = new GVerify("v_container");
 
         //创建压缩base64
         var fileDom = document.getElementById("file");
         var MAX_SIZE = 500;
         var files = [];
-        fileDom.addEventListener("change", function () {
+    fileDom.addEventListener("change", function () {
             var fileImg = this.files;
             console.log(fileImg);
             for (var i = 0; i < fileImg.length; i++) {
@@ -434,8 +519,7 @@
             //告诉文件读取工具类读取那个文件
             reader.readAsDataURL(file);
             }
-        }, false);
-        
+        }, false);  
     function render(src, name) {
         //创建Image对象
         var image = new Image();
@@ -470,76 +554,103 @@
         image.src = src;
         //console.log("blob",blob);
     }
-
     function mr_verify(){
         //获取表单对象
-        var name=document.getElementById("name")
-        var mail=document.getElementById("inputEmail");
-        var password=document.getElementById("inputPassword");
-        var passwordRepeat=document.getElementById("inputPassword2");
         var tel=document.getElementById("tel");
         var button=document.getElementById("code_input");
         var chackbox=document.getElementById("customCheck111");
         var img=document.getElementById("file");
+        var password=document.getElementById("inputPassword");
+        var passwordRepeat=document.getElementById("inputPassword2");
 
-        //验证项目是否为空
-        if(name.value==='' || name.value===null){
-            alert("用户名不能为空！");
-                //document.getElementById("name").setAttribute("placeholder","新文本内容");
-            return;
-        }
-        //验证邮箱是否为空
-        if(mail.value==='' || mail.value===null){
-            alert("邮箱不能为空！");
-            return;
-        }
-        //验证密码是否为空
-        if(password.value==='' || password.value===null){
-            alert("密码不能为空！");
-            return;
-        }
         if(passwordRepeat.value==='' || passwordRepeat.value===null){
-            alert("确认密码不能为空！");
+            $("#password_2").html("*确认密码不能为空！*");
+            $("#password_2").css("color","red");
             return;
-        }
-        if(password.value!==passwordRepeat.value ){
-            alert("密码设置前后不一致！");
+        }else if(password.value!==passwordRepeat.value){
+            $("#password_2").html("*密码设置前后不一致！*");
+            $("#password_2").css("color","red");
             return;
+        }else if(password.value===passwordRepeat.value){
+            $("#password_2").html("");
         }
-        //验证邮件格式
-        apos = mail.value.indexOf("@")
-        dotpos = mail.value.lastIndexOf(".")
-        if (apos < 1 || dotpos - apos < 2) {
-            alert("邮箱格式错误！");
-            return
+        
+        if(img.value==='' || img.value ===null){//验证头像是否为空
+            $("#image").html("*请插入一张图片作为头像*");
+            $("#image").css("color","red");
         }
-        //验证头像是否为空
-        if(img.value==='' || img.value ===null){
-            alert("请插入一张图片作为头像")
-            return;
-        }
-        //判断验证码是否为空
-        if(button.value ==='' || button.value===null){
-            alert("验证码不能为空");
-            
-            document.getElementById("my_button").onclick = function(){
-                var res = verifyCode.validate(document.getElementById("code_input").value);
-                if(res){
-                    alert("验证码正确")
-                    
-                }else{
-                    alert("验证码错误");
-                }
-            }
-            return;
-        }
+
         //判断是否有勾选条约复选框
         if ($("#customCheck111").is(":checked")==false){
             alert("请勾选 接受我们的权力和条款");
             return;
         }
 
+        //判断验证码是否为空
+        if(button.value ==='' || button.value===null){
+            alert("验证码不能为空");
+        
+            document.getElementById("my_button").onclick = function(){
+                var res = verifyCode.validate(document.getElementById("code_input").value);
+            }
+            return;
+        }
 
+        //此处为了简便， 只考虑一个文件，多个文件类似
+        var data =files[0];
+        //将+号转码，防止传输过程中丢失
+        data.replace(/\+/g, '%2B')
+
+        var name_input_1=$('#name').val()
+        var pass_input_1=$('#inputPassword').val()
+        var mail_1=document.getElementById("inputEmail");
+        //验证邮箱是否为空
+        apos = mail_1.value.indexOf("@")
+        dotpos = mail_1.value.lastIndexOf(".")
+        if(mail_1.value==='' || mail_1.value===null){
+            $("#mail").html("*邮箱不能为空*");
+            $("#mail").css("color","red");
+        }else if(apos < 1 || dotpos - apos < 3){
+            //验证邮件格式
+            $("#mail").html("*邮箱格式错误*");
+            $("#mail").css("color","red");
+            return;
+        }else{
+            //验证邮件格式
+            $("#mail").html("*邮箱格式正确*");
+            $("#mail").css("color","green");
+        }
+        if(name_input_1.length > 6 && pass_input_1.length > 5){
+            console.log("1111111111111")
+            console.log("res",res)
+                $.ajax({
+                type:"GET",
+                url:"http://47.100.10.123:10080/user/user_regist",
+                async:false,
+                dataType:'json',
+                data:{
+                    name:$("#name").val(),
+                    mail:$("#inputEmail").val(),
+                    password:$("#inputPassword").val(),
+                    photo:$($.parseHTML(data)).val()
+                    },
+                success:function(data){
+
+                    if(data==''){
+                            
+                        console.log("222")
+                    }else{
+                        console.log("333")
+                        $("#msg").html(data);
+                        $("#shiBai").html("");
+                        //window.location.href="/";//注册之后跳转到登录
+                }
+                }
+            })
+        }
+        
+        //alert('注册成功！');
+        
         //验证手机号是否为空
         // if(tel.value==='' || tel.value===null){
         //     alert("手机号码不能为空！");
@@ -554,43 +665,7 @@
         //     alert("手机号是11个数字！");
         //     return;
         // }
-
-
-        //此处为了简便， 只考虑一个文件，多个文件类似
-        var data = "data=" + files[0];
-        // console.log("data",data)
-        //将+号转码，防止传输过程中丢失
-        data.replace(/\+/g, '%2B')
-        console.log("$.parseHTML(data)",$.parseHTML(data))
-        //console.log("data.replace(/\+/g, '%2B')",data.replace(/\+/g, '%2B'))
-
-        $.ajax({
-            type:"GET",
-            url:"http://47.100.10.123:10080/user/user_regist",
-            async:false,
-            dataType:'json',
-            data:{
-                name:$("#name").val(),
-                mail:$("#inputEmail").val(),
-                password:$("#inputPassword").val(),
-                photo:$($.parseHTML(data)).val()
-                },
-            success:function(data){
-                console.log("data",data)
-                if(data==''){
-                    $("#xs").text("该用户名已经存在!");                 
-                    console.log("222")
-                }else{
-                    console.log("333")
-                    $("#msg").html(data);
-                    $("#shiBai").html("");
-                    //window.location.href="/";//注册之后跳转到登录
-            }
-            }
-        })
-        //alert('注册成功！');
     }
-
     
     'use strict';
     var mySwiper = new Swiper('.swiper-signin', {

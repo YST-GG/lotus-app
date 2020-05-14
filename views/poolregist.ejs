@@ -286,6 +286,7 @@
                             <!--用户名-->
                             <label for="name" class="sr-only">用户名</label>
                             <input type="email" id="name" class="form-control text-center form-control-lg border-0" placeholder="用户名" required="" autofocus="">
+                            <span id="ts"></span>
                             <div id="xs" style="color:red"></div>
                             <hr class="my-0">
                             <!--邮箱-->
@@ -578,6 +579,39 @@
             })
             //alert('注册成功！');
         }
+
+    //失去焦点获取后台用户名判断用户名是否存在
+    $("#name").blur(function(){
+        var name_input=$('#name').val()
+        //console.log("name_input",name_input)
+        var name_data = "";
+        //用ajax去数据库匹配，
+        $.ajax({
+            url:"http://47.100.10.123:10080/user/get_power_user", //要处理的页面
+            data:'', //要传过去的数据
+            type:"GET",  //提交方式
+            dataType:"json", //返回的数据类型，TEXT字符串 JSON返回JSON XML返回XML；dataType中T要大写！！
+            success: function(json){  //回调函数，data为形参，是从login-cl.php页面返回的值
+                var i=0;
+                for(i;json.data.length>=i ;i++){
+                    console.log("name_data",name_data)
+                    name_data=json.data[i].name
+                    if(name_input === name_data){
+                        $("#ts").html("*该用户名已注册*");
+                        $("#ts").css("color","red");
+                        return;
+                    }else if(name_input==null|| name_input==''){
+                        $("#ts").html("*用户名不能为空*");
+                        $("#ts").css("color","red");
+                        return;
+                    }else{
+                        $("#ts").html("*该用户名可用*");  
+                        $("#ts").css("color","green");
+                    }
+                }
+            }
+        });    
+    })
 
     'use strict';
     var mySwiper = new Swiper('.swiper-signin', {
