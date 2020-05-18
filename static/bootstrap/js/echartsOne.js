@@ -23,8 +23,8 @@ function echartStr(names,brower){
                     {
                         name: '访问来源',
                         type: 'pie',
-                        radius : '60%',
-                        center: ['32%', '50%'],
+                        radius : '80%',
+                        center: ['50%', '50%'],
                         data: brower,
                         itemStyle: {
                             emphasis: {
@@ -135,8 +135,8 @@ function echartStr1(names,brower){
                     {
                         name: '访问来源',
                         type: 'pie',
-                        radius : '60%',
-                        center: ['32%', '50%'],
+                        radius : '80%',
+                        center: ['50%', '50%'],
                         data: brower,
                         itemStyle: {
                             emphasis: {

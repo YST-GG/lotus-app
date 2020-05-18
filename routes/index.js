@@ -37,6 +37,9 @@ exports.poolIntroduce = function (req, res) {
 exports.buyPower = function (req, res) {
     res.render("buyPower", { title: '购买算力介绍' })
 };
+exports.public_header= function (req, res) {
+    res.render("public_header", { title: '头部导航' })
+};
 
 
 

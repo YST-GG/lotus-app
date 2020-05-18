@@ -31,8 +31,8 @@ app.get("/registall", routes.registall);
 //未完成的页面/poolIntroduce  /pool /buyPower
 app.get("/poolIntroduce",routes.poolIntroduce);
 app.get("/buyPower",routes.buyPower);
-
-
+//头部导航
+app.get("/public_header", routes.public_header);
 
 
 app.listen(8989);
